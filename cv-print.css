@@ -1,0 +1,93 @@
+@media print {
+    @page { 
+        margin: 0; 
+    }
+
+    #Tools .Subsection:not(:last-child) {
+        flex-basis: calc(20% - 16px);
+    }
+
+    .Intro {
+        text-align: justify;
+        margin-bottom: 10px;
+    }
+
+    .Header__wrapper, .Content__wrapper {
+        max-width: 100%;
+    }
+
+    .StickyHeader, .Header {
+        background: none;
+        position: relative;
+        top: unset;
+    }
+
+    .StickyHeader *, .Header * {
+        text-shadow: none;
+        color: #333;
+    }
+
+    .Header {
+        padding: 0 16px;
+    }
+    
+    body { 
+        margin: 0 0.6cm 1.6cm; 
+    }
+
+    .Section__wrapper {
+        margin-bottom: 0 !important;
+    }
+
+    section {
+        flex-wrap: nowrap;
+    }
+
+    #Education section {
+        flex-wrap: wrap;
+    }
+
+    .Subsection {
+        flex-basis: auto;
+    }
+
+    .Subsection:last-child {
+        margin-right: 0;
+    }
+
+    #FeaturedProjects, h2 {
+        display: none;
+    }
+
+    .Content {
+        padding: 0 16px;
+    }
+
+    footer {
+        bottom: 0;
+        left: 0;
+        right: 0;
+        display: block;
+        position: fixed;
+        padding: 0 16px 0.6cm;
+        color: #ccc;
+        font-size: 10px;
+        text-align: center;
+    }
+
+    #Employement h3 {
+        display: block;
+    }
+
+    .Employement__date {
+        margin-right: 10px;
+        width: 30%;
+        display: inline-block;
+        letter-spacing: inherit;
+        font-variant: small-caps;
+    }
+
+    .Actions {
+        display: none;
+    }
+}

@@ -1,0 +1,259 @@
+html, body {
+    background: #f5f5f5;
+    color: #333;
+    font-family: 'Segoe UI';
+    font-size: 14px;
+    line-height: 1;
+}
+
+.Actions {
+    display: flex;
+    margin-bottom: 5px;
+    position: fixed;
+    top: 8px;
+    right: -8px;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.Actions .Icon {
+    padding: 8px;
+}
+
+.Actions .Icon:first-child {
+    margin-left: -8px;
+}
+
+html, body, p, h1, h2, h3 {
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    margin-bottom: 10px;
+    font-size: 40px;
+    line-height: 1;
+    font-weight: 300;
+}
+
+h2 {
+    font-size: 24px;
+    line-height: 1;
+    font-weight: 300;
+    text-shadow: 3px 3px 5px #aaa;
+    color: #365E91;
+    margin-bottom: 20px;
+}
+
+h3 {
+    margin-top: 20px;
+    font-size: 18px;
+    line-height: 1.4;
+    font-weight: 300;
+    font-variant: small-caps;
+    color: #afafaf;
+}
+
+h3.ProjectTitle {
+    margin: 10px 0 5px;
+    font-weight: 500;
+    color: inherit;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+.Cv {
+    display: flex;
+    flex-direction: column;
+    animation: fadeIn 400ms ease-out 200ms backwards;
+}
+
+.Header {
+    background: #365E91;
+    padding: 20px 16px 40px;
+    display: flex;
+    justify-content: center;
+}
+
+.StickyHeader {
+    background: #365E91;
+    padding: 40px 16px 20px;
+    display: flex;
+    justify-content: center;
+    position: sticky;
+    top: -20px;
+    flex-direction: column;
+}
+
+.Header *, .StickyHeader * {
+    color: #e5e5e5;
+}
+
+.Header__wrapper {
+    max-width: 480px;
+    width: 100%;
+    align-self: center;
+}
+
+.Content__wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 480px;
+}
+
+.Content__wrapper > :last-child {
+    margin-bottom: 20px;
+}
+
+section {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.Section__wrapper {
+    margin-bottom: 40px;
+    width: 100%;
+}
+
+.Section__wrapper--filled {
+    background-color: #e5e5e5;
+    margin: -40px calc((100vw - 100%) / -2) 40px;
+    padding: 40px calc((100vw - 100%) / 2);
+}
+
+.Section__wrapper--filled h2 {
+    text-shadow: none;
+    font-weight: 350;
+}
+
+.Section__wrapper:not(.Section__wrapper--filled):not(:last-child) {
+    margin-bottom: 80px;
+}
+
+.Subsection {
+    flex-shrink: 0;
+    flex-basis: calc(50% - 16px);
+    margin-right: 16px;
+}
+
+.Section--wide .Subsection {
+    margin: 20px 0;
+    flex-basis: 100%;
+}
+
+.Section--wide .Subsection:last-child {
+    margin-bottom: 0;
+}
+
+section ul {
+    padding: 0 0 0 8px;
+    margin: 0 0 0 4px;
+    list-style-type: none;
+    padding-left: 8px;
+    border-left: 1px solid #e5e5e5;
+}
+
+section ul li {
+    line-height: 1.25;
+    padding: 4px;
+}
+
+.PersonInfo {
+    text-shadow: 3px 5px 16px #333;
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    flex-wrap: wrap;
+}
+
+.Contact__wrapper {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+p {
+    font-size: 16px;
+    line-height: 1.4;
+    font-weight: 400;
+}
+
+.Contact__item {
+    font-size: 18px;
+    flex-shrink: 0;
+    font-weight: 400;
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.Contact__item:not(:last-child) {
+    margin-right: 40px;
+}
+
+.Intro {
+    font-size: 16px;
+    line-height: 1.4;
+}
+
+.Content {
+    padding: 40px 16px  ;
+    display: flex;
+    overflow: hidden;
+    justify-content: center;
+}
+
+.ProjectImage {
+    height: 200px;
+    width: 100%;
+    object-fit: cover;
+    object-position: bottom;
+    box-shadow: 5px 5px 30px #ccc;
+    border: 1px solid #d4d4d4;
+}
+
+.Icon {
+    width: 24px;
+    height: 24px;
+    margin-right: 16px;
+}
+
+footer {
+    display: none;
+}
+
+#Employement h2 {
+    margin-bottom: 40px;
+}
+
+.Employement__date {
+    margin-bottom: 5px;
+    display: block;
+    color: #afafaf;
+    letter-spacing: 2;
+    font-variant: small-caps;
+}
+
+#Employement h3 {
+    display: none;
+}
+
+.Subsection--wide {
+    flex-basis: 100% !important;
+}
+
+/**************** Mobile ONLY ****************/
+
+@media(max-width: 959px) {
+    .Subsection--orphan {
+        flex-basis: calc(70% - 16px);
+    }
+
+    .Subsection--wideOnMobile {
+        flex-basis: 100%;
+    }
+}
