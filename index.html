@@ -23,11 +23,12 @@
                 <div class="PersonInfo">
                     <h1>Szymon Duda</h1>
                     <div class="Contact__wrapper">
-                        <div class="Contact__item"><img class="Icon" src="images/phone.svg" 
-                            alt="Mobile" />722 321 591
+                        <div class="Contact__item"><img class="Icon" src="images/phone.svg" alt="Telefon" />
+                            <a href="tel:722321591">722 321 591</a>
                         </div>
-                        <div class="Contact__item"><img class="Icon" src="images/email.svg"
-                            alt="E-mail" />szymon.piotr.duda@gmail.com</div>
+                        <div class="Contact__item"><img class="Icon" src="images/email.svg" alt="E-mail" />
+                            <a href="mailto:szymon.piotr.duda@gmail.com">szymon.piotr.duda@gmail.com</a>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -45,7 +46,7 @@
         <div class="Content">
             <div class="Content__wrapper">
 
-                <div class="Section__wrapper">
+                <div class="Section__wrapper" id="Skills">
                     <h2>Umiejętności</h2>
                     <section>
                         <div class="Subsection">
@@ -54,8 +55,7 @@
                                 <li>React</li>
                                 <li>Razor</li>
                                 <li>HTML</li>
-                                <li>CSS (SaSS, Less, PostCSS)</li>
-                                <li>Flexbox</li>
+                                <li>CSS <small>(SaSS, Less, PostCSS, Styled Components, Emotion, BEM, Flexbox)</small></li>
                                 <li>WebForms</li>
                                 <li>WinForms</li>
                             </ul>
@@ -75,7 +75,7 @@
                             <h3>Inne</h3>
                             <ul>
                                 <li>.NETCF</li>
-                                <li>Komunikacja z urządzeniami (Serial, TCP, UDP, ActiveSync, RFID)</li>
+                                <li>Komunikacja z urządzeniami <small>(Serial, TCP, UDP, ActiveSync, RFID)</small></li>
                             </ul>
                         </div>
                     </section>
@@ -86,7 +86,10 @@
                     <section class="Section--wide">
                         <div class="Subsection">
                             <img src="images/styrerommet.jpg" class="ProjectImage" alt="Zrzut ekranu aplikacji Styrerommet" />
-                            <h3 class="ProjectTitle">Styrerommet</h3>
+                            <h3 class="ProjectTitle">
+                                Styrerommet
+                                <a href="https://styrerommet.no" class="ExternalLink" target="_blank"><img class="Icon" src="images/link.svg" alt="Przejdź do strony"/></a>
+                            </h3>
                             <p>Modułowa aplikacja zaprojektowana jako narzędzie kontrolne dla wspólnot
                                 mieszkaniowych oraz właścicieli mieszkań. Jej zadaniem jest usprawnienie
                                 m. in. procedur zarządu, bezpieczeństwa, rozliczeń, zarządzanie wewnętrzną
@@ -97,7 +100,10 @@
                         </div>
                         <div class="Subsection">
                             <img src="images/kognifai.jpg" class="ProjectImage" alt="Zrzut ekranu aplikacji Kognifai" />
-                            <h3 class="ProjectTitle">Kognifai / Kongsberg</h3>
+                            <h3 class="ProjectTitle">
+                                Kongsberg Kognifai
+                                <a href="https://kognifai.no" class="ExternalLink" target="_blank"><img class="Icon" src="images/link.svg" alt="Przejdź do strony"/></a>
+                            </h3>
                             <p>Strony norweskiego konglomeratu Kongsberg prezentujące zarówno ogólny profil
                                 firmy jak i szczegóły dotyczące konkretnych usług i produktów.</p>
                         </div>
@@ -117,7 +123,7 @@
                             <h3>Implementacja</h3>
                             <ul>
                                 <li>Visual Studio</li>
-                                <li>Visual Studio Code</li>
+                                <li>VS Code</li>
                                 <li>JetBrains Rider</li>
                                 <li>Storybook</li>
                                 <li>Webpack</li>
@@ -160,6 +166,7 @@
                                 <li>Travis</li>
                                 <li>Chromatic</li>
                                 <li>Jest</li>
+                                <li>Formatters, Linters</li>
                             </ul>
                         </div>
                     </section>

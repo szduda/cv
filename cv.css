@@ -6,6 +6,28 @@ html, body {
     line-height: 1;
 }
 
+a, a:active, a:visited {
+    color: #365E91;
+    text-decoration: underline;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+.StickyHeader a {
+    text-decoration: none;
+}
+
+.ExternalLink {
+    width: 24px;
+    height: 24px;
+    padding: 3px;
+    display: inline-block;
+    transform: translateY(3px);
+    margin-left: 5px;
+}
+
 .Actions {
     display: flex;
     margin-bottom: 5px;
@@ -147,7 +169,7 @@ section {
 }
 
 .Section--wide .Subsection:last-child {
-    margin-bottom: 0;
+    margin-bottom: 40px;
 }
 
 section ul {
@@ -211,7 +233,7 @@ p {
     height: 200px;
     width: 100%;
     object-fit: cover;
-    object-position: top;
+    object-position: top left;
     box-shadow: 5px 5px 30px #ccc;
     border: 1px solid #d4d4d4;
 }

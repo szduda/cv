@@ -75,6 +75,11 @@
         text-align: center;
     }
 
+    #Skills section ul li {
+        max-width: 220px;
+        min-width: 130px;
+    }
+
     #Employement h3 {
         display: block;
     }
