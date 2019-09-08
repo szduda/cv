@@ -144,8 +144,8 @@ section {
 
 .Section__wrapper--filled {
     background-color: #e5e5e5;
-    margin: -40px calc((100vw - 100%) / -2) 40px;
-    padding: 40px calc((100vw - 100%) / 2);
+    margin: -40px -16px 40px;
+    padding: 40px 16px;
 }
 
 .Section__wrapper--filled h2 {
