@@ -3,13 +3,6 @@
         margin-bottom: 80px;
     }
 
-    .Actions {
-        position: fixed;
-        right: 8px;
-        top: 25px;
-        flex-direction: row;
-    }
-
     .Header__wrapper {
         align-self: center;
     }
@@ -115,5 +108,12 @@
 
     .Contact__item:not(:last-child) {
         margin-right: 80px;
+    }
+
+    .Actions {
+        position: fixed;
+        right: 8px;
+        top: 25px;
+        flex-direction: row;
     }
 }
