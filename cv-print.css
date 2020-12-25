@@ -12,6 +12,10 @@
         margin-bottom: 10px;
     }
 
+    .StickyHeader {
+        box-shadow: none;
+    }
+
     .Header__wrapper, .Content__wrapper {
         max-width: 100%;
     }
@@ -33,15 +37,20 @@
     
     body { 
         margin: 0.6cm 0.6cm 1.6cm;
-        font-size: 14px;
+        font-size: 12px;
     }
     
     h3 {
         font-size: 12px;
     }
 
+    h3::before {
+        display: none;
+    }
+
     .Section__wrapper {
         margin-bottom: 0 !important;
+        width: 100%;
     }
 
     section {
@@ -54,10 +63,6 @@
 
     .Subsection {
         flex-basis: auto;
-    }
-
-    .Subsection:last-child {
-        margin-right: 0;
     }
 
     #FeaturedProjects, h2 {
