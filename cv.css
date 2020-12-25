@@ -1,13 +1,16 @@
 html, body {
     background: #F7FDED;
     color: #333;
-    font-family: Arial;
-    font-size: 14px;
-    line-height: 1;
+    font-family: 'Work Sans', sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 1.4;
+    -webkit-font-smoothing: subpixel-antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
 
 a, a:active, a:visited {
-    color: #1B222B;
+    color: inherit;
     text-decoration: underline;
 }
 
@@ -32,7 +35,7 @@ a:hover {
     display: flex;
     margin-bottom: 5px;
     position: fixed;
-    top: 8px;
+    top: 20px;
     right: -8px;
     flex-direction: column;
     align-items: flex-end;
@@ -53,36 +56,44 @@ html, body, p, h1, h2, h3 {
 
 h1 {
     margin-bottom: 10px;
-    font-size: 40px;
+    font-size: 36px;
     line-height: 1;
     font-weight: 300;
-    color: #F3C178;
+    color: #3BA590;
 }
 
 h2 {
-    font-size: 24px;
+    font-size: 32px;
     line-height: 1;
     font-weight: 600;
     color: #1B222B;
-    margin-bottom: 20px;
+    margin-bottom: 32px;
     padding-bottom: 8px;
-    border-bottom: solid 2px #F2BB69;
+    border-bottom: solid 2px #3BA590;
     font-variant: all-small-caps;
     align-self: center;
 }
 
 h3 {
     margin-top: 20px;
-    font-size: 32px;
-    line-height: 1.5;
-    font-weight: 600;
-    font-variant: all-small-caps;
+    font-size: 16px;
+    line-height: 32px;
+    font-weight: 400;
     color: #afafaf;
 }
 
+h3:not(.ProjectTitle) {
+    text-transform: lowercase;
+}
+
+h3:not(.ProjectTitle)::before {
+    content: '// ';
+}
+
 h3.ProjectTitle {
-    margin: 10px 0 5px;
-    color: #F2BB69;
+    font-size: 24px;
+    margin: 4px 0 8px;
+    color: #F0B356;
 }
 
 @keyframes fadeIn {
@@ -98,28 +109,25 @@ h3.ProjectTitle {
 
 .Header {
     background: #1B222B;
-    padding: 20px 16px 40px;
+    padding: 20px 8px 40px;
     display: flex;
     justify-content: center;
 }
 
 .StickyHeader {
     background: #1B222B;
-    padding: 40px 16px 20px;
+    padding: 20px 8px 20px;
     display: flex;
     justify-content: center;
     position: sticky;
-    top: -20px;
+    top: 0;
     flex-direction: column;
     z-index: 100;
-}
-
-.Header *, .StickyHeader * {
-    color: #e5e5e5;
+    box-shadow: 0 0 4px 2px #1B222Bcc;
 }
 
 .Header__wrapper {
-    max-width: 480px;
+    max-width: 640px;
     width: 100%;
     align-self: center;
 }
@@ -128,7 +136,7 @@ h3.ProjectTitle {
     display: flex;
     flex-direction: column;
     align-items: center;
-    max-width: 480px;
+    max-width: 640px;
 }
 
 .Content__wrapper > :last-child {
@@ -143,19 +151,26 @@ section {
 
 .Section__wrapper {
     margin-bottom: 40px;
-    width: 100%;
+    padding: 0 8px;
     display: flex;
     flex-direction: column;
 }
 
 .Section__wrapper--filled {
-    background: #3B7D75;
-    margin: -40px -16px 40px;
-    padding: 40px 16px 0;
+    background: #27323F;
+    margin: -40px 0 40px;
+    padding: 40px 0;
+    width: 100vw;
+}
+
+.Section--wide {
+    margin: 0 12px;
+    align-self: center;
+    max-width: 640px;
 }
 
 .Section__wrapper--filled p, .Section__wrapper--filled h2 {
-    color: #F0FBDB;
+    color: #E7E5DF;
 }
 
 .Section__wrapper:not(.Section__wrapper--filled):not(:last-child) {
@@ -163,13 +178,11 @@ section {
 }
 
 .Subsection {
-    flex-shrink: 0;
-    flex-basis: calc(50% - 16px);
-    margin-right: 16px;
+    flex: 1 0 50%;
 }
 
 .Section--wide .Subsection {
-    margin: 20px 0;
+    margin: 20px 0 60px;
     flex-basis: 100%;
 }
 
@@ -202,12 +215,6 @@ section ul li {
     flex-wrap: wrap;
 }
 
-p {
-    font-size: 16px;
-    line-height: 1.4;
-    font-weight: 400;
-}
-
 .Contact__item {
     font-size: 18px;
     flex-shrink: 0;
@@ -215,6 +222,7 @@ p {
     margin-top: 10px;
     display: flex;
     align-items: center;
+    color: #F7FDED;
 }
 
 .Contact__item:not(:last-child) {
@@ -222,12 +230,11 @@ p {
 }
 
 .Intro {
-    font-size: 16px;
-    line-height: 1.4;
+    color: #afafaf;
 }
 
 .Content {
-    padding: 40px 16px  ;
+    padding: 40px 0;
     display: flex;
     overflow: hidden;
     justify-content: center;
@@ -238,8 +245,8 @@ p {
     width: 100%;
     object-fit: cover;
     object-position: top left;
-    border: 1px solid #1B222B44;
-    border-radius: 8px;
+    border-radius: 4px;
+    box-sizing: border-box;
 }
 
 .Icon {
@@ -275,10 +282,6 @@ footer {
 /**************** Mobile ONLY ****************/
 
 @media(max-width: 959px) {
-    .Subsection--orphan {
-        flex-basis: calc(70% - 16px);
-    }
-
     .Subsection--wideOnMobile {
         flex-basis: 100%;
     }

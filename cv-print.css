@@ -32,7 +32,12 @@
     }
     
     body { 
-        margin: 0 0.6cm 1.6cm; 
+        margin: 0.6cm 0.6cm 1.6cm;
+        font-size: 14px;
+    }
+    
+    h3 {
+        font-size: 12px;
     }
 
     .Section__wrapper {

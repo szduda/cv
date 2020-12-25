@@ -1,4 +1,18 @@
-@media(min-width: 960px) {
+@media(min-width: 480px) {
+    
+    .Actions {
+        position: fixed;
+        right: 8px;
+        top: 25px;
+        flex-direction: row;
+    }
+}
+
+@media(min-width: 1080px) {
+    html, body {
+        font-size: 14px;
+    }
+
     #Employement h2 {
         margin-bottom: 80px;
     }
@@ -19,6 +33,11 @@
         flex-basis: auto
     }
 
+    .Section--wide {
+        max-width: 800px;
+        margin: 0;
+    }
+
     .Section--wide .Subsection {
         margin: 40px 0 120px;
     }
@@ -32,21 +51,21 @@
     }
 
     h2 {
-        font-size: 32px;
+        font-size: 40px;
         text-align: center;
+        margin-bottom: 40px;
+
     }
     
     h3 {
         margin-top: 40px;
-        font-size: 24px;
-        line-height: 32px;
-        font-weight: 600;
+        font-size: 20px;
+        line-height: 48px;
     }
 
     h3.ProjectTitle {
-        font-size: 32px;
-        line-height: 40px;
-        margin: 20px 0 10px;
+        font-size: 28px;
+        margin: 20px 0 16px;
     }
     
     .Header {
@@ -56,6 +75,10 @@
     .StickyHeader {
         padding: 100px 16px 20px;
         top: -80px;
+    }
+
+    .Section__wrapper {
+        width: 100%;
     }
 
     .Section__wrapper:not(.Section__wrapper--filled):not(:last-child) {
@@ -89,6 +112,7 @@
     
     .ProjectImage {
         height: 400px;
+        border-radius: 4px;
     }
 
     .Content__wrapper > :last-child {
@@ -97,7 +121,7 @@
 
     .Section__wrapper--filled {
         margin: -20px calc((100vw - 100%) / -2) 120px;
-        padding: 100px calc((100vw - 100%) / 2);
+        padding: 120px calc((100vw - 100%) / 2);
     }
 }
 
@@ -110,10 +134,7 @@
         margin-right: 80px;
     }
 
-    .Actions {
-        position: fixed;
-        right: 8px;
-        top: 25px;
-        flex-direction: row;
+    .Section--wide {
+        max-width: 960px;
     }
 }
