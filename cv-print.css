@@ -24,6 +24,8 @@
         background: none;
         position: relative;
         top: unset;
+        padding-left: 16px;
+        padding-right: 16px;
     }
 
     .StickyHeader *, .Header * {
@@ -39,12 +41,21 @@
         margin: 0.6cm 0.6cm 1.6cm;
         font-size: 12px;
     }
+
+    h1 {
+        font-size: 28px;
+        line-height: 32px;
+    }
     
     h3 {
         font-size: 12px;
     }
 
     h3::before {
+        display: none;
+    }
+
+    hr {
         display: none;
     }
 
@@ -96,7 +107,7 @@
 
     .Employement__date {
         margin-right: 10px;
-        width: 30%;
+        width: 25%;
         display: inline-block;
         letter-spacing: inherit;
         font-variant: small-caps;

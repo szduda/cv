@@ -68,6 +68,11 @@
         margin: 20px 0 16px;
     }
     
+    hr {
+        margin: 8px 0 32px 8px;
+        width: 75%;
+    }
+
     .Header {
         padding: 40px 16px 80px;
     }
