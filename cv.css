@@ -82,6 +82,7 @@ h3 {
     color: #afafaf;
 }
 
+
 h3:not(.ProjectTitle) {
     text-transform: lowercase;
 }
@@ -207,6 +208,12 @@ section ul {
 section ul li {
     line-height: 1.25;
     padding: 4px;
+}
+
+li.dimmed {
+    color: #afafaf;
+    font-size: smaller;
+    letter-spacing: 0.05rem;
 }
 
 .PersonInfo {
