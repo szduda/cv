@@ -1,0 +1,149 @@
+---
+import "../styles/global.css";
+import CvList from "./CvList.astro";
+import CvProject from "./CvProject.astro";
+import CvSection from "./CvSection.astro";
+
+interface SectionItem {
+  title: string;
+  list: string[];
+}
+
+interface ProjectItem {
+  title: string;
+  url: string;
+  image: string;
+  imageAlt: string;
+  description: string;
+}
+
+interface GenericSection {
+  title: string;
+  items: SectionItem[];
+}
+
+interface CvData {
+  meta: {
+    lang: string;
+    description: string;
+  };
+  person: {
+    name: string;
+    phoneLabel: string;
+    emailLabel: string;
+    phone: string;
+    phoneHref: string;
+    email: string;
+    emailHref: string;
+  };
+  intro: string[];
+  skills: {
+    title: string;
+    items: SectionItem[];
+  };
+  projects: {
+    title: string;
+    items: ProjectItem[];
+  };
+  tools: GenericSection;
+  employment: GenericSection;
+  education: GenericSection;
+  footer: string;
+}
+
+interface Props {
+  data: CvData;
+  alternateHref: string;
+  alternateFlagSrc: string;
+  alternateFlagAlt: string;
+}
+
+const { data, alternateHref, alternateFlagSrc, alternateFlagAlt } = Astro.props;
+---
+
+<!doctype html>
+<html lang={data.meta.lang} class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content={data.meta.description} />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{data.person.name} - CV</title>
+  </head>
+  <body class="bg-[#F7FDED] text-[#333] antialiased">
+    <main class="min-h-screen">
+      <div class="sticky top-0 z-20 bg-[#1B222B] px-4 py-5 pr-14 shadow-[0_0_4px_2px_#1B222Bcc]">
+        <div class="mx-auto flex w-full max-w-5xl flex-wrap items-center justify-between gap-3">
+          <div class="fixed right-2 top-5 print-hidden">
+            <a href={alternateHref} class="inline-flex rounded p-2 transition hover:bg-white/10">
+              <img src={alternateFlagSrc} alt={alternateFlagAlt} class="h-6 w-6" />
+            </a>
+          </div>
+          <h1 class="text-4xl font-light leading-none text-[#3BA590]">{data.person.name}</h1>
+          <div class="flex flex-wrap items-center md:justify-end gap-x-10 gap-y-3 text-[#F7FDED]">
+            <div class="flex items-center">
+              <img src="/images/phone.svg" alt={data.person.phoneLabel} class="mr-3 h-6 w-6" />
+              <a href={data.person.phoneHref} class="underline hover:no-underline">{data.person.phone}</a>
+            </div>
+            <div class="flex items-center">
+              <img src="/images/email.svg" alt={data.person.emailLabel} class="mr-3 h-6 w-6" />
+              <a href={data.person.emailHref} class="underline hover:no-underline">{data.person.email}</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <section class="bg-[#1B222B] px-4 pb-10 pt-6 text-[#afafaf] md:pb-20">
+        <div class="mx-auto max-w-5xl space-y-4 text-base md:text-lg">
+          {data.intro.map((paragraph, index) => (
+            <p>
+              {index === data.intro.length - 1 ? <span class="print:hidden">{paragraph}</span> : paragraph}
+            </p>
+          ))}
+        </div>
+      </section>
+
+      <CvSection title={data.skills.title}>
+        <div class="grid gap-10 md:grid-cols-3">
+          {data.skills.items.map((item) => (
+            <CvList title={item.title} items={item.list} />
+          ))}
+        </div>
+      </CvSection>
+
+      <CvSection title={data.projects.title} inverted sectionClass="featured-projects">
+        <div class="grid gap-8 md:grid-cols-2">
+          {data.projects.items.map((project) => (
+            <CvProject title={project.title} url={project.url} imageUrl={project.image}>
+              {project.description}
+            </CvProject>
+          ))}
+        </div>
+      </CvSection>
+
+      <CvSection title={data.tools.title} sectionClass="tools-section">
+        <div class="grid gap-10 md:grid-cols-3">
+          {data.tools.items.map((item) => (
+            <CvList title={item.title} items={item.list} />
+          ))}
+        </div>
+      </CvSection>
+
+      <CvSection title={data.employment.title} sectionClass="employment-section" contentClass="pb-0 md:pb-0">
+        <div class="grid gap-10 md:grid-cols-1">
+          {data.employment.items.map((item) => (
+            <CvList title={item.title} items={item.list} />
+          ))}
+        </div>
+      </CvSection>
+
+      <CvSection title={data.education.title} contentClass="pb-0 md:pb-0">
+        <div class="grid gap-10 md:grid-cols-3">
+          {data.education.items.map((item) => (
+            <CvList title={item.title} items={item.list} />
+          ))}
+        </div>
+      </CvSection>
+    </main>
+    <footer class="mx-auto max-w-5xl px-4 py-8 text-sm text-[#666]">{data.footer}</footer>
+  </body>
+</html>

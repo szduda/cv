@@ -1,0 +1,119 @@
+@media print {
+    @page { 
+        margin: 0; 
+    }
+
+    #Tools .Subsection:not(:last-child) {
+        flex-basis: calc(20% - 16px);
+    }
+
+    .Intro {
+        text-align: justify;
+        margin-bottom: 10px;
+    }
+
+    .StickyHeader {
+        box-shadow: none;
+    }
+
+    .Header__wrapper, .Content__wrapper {
+        max-width: 100%;
+    }
+
+    .StickyHeader, .Header {
+        background: none;
+        position: relative;
+        top: unset;
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+
+    .StickyHeader *, .Header * {
+        text-shadow: none;
+        color: #333;
+    }
+
+    .Header {
+        padding: 0 16px;
+    }
+    
+    body { 
+        margin: 0.6cm 0.6cm 1.6cm;
+        font-size: 12px;
+    }
+
+    h1 {
+        font-size: 28px;
+        line-height: 32px;
+    }
+    
+    h3 {
+        font-size: 12px;
+    }
+
+    h3::before {
+        display: none;
+    }
+
+    hr {
+        display: none;
+    }
+
+    .Section__wrapper {
+        margin-bottom: 0 !important;
+        width: 100%;
+    }
+
+    section {
+        flex-wrap: nowrap;
+    }
+
+    #Education section {
+        flex-wrap: wrap;
+    }
+
+    .Subsection {
+        flex-basis: auto;
+    }
+
+    #FeaturedProjects, h2 {
+        display: none;
+    }
+
+    .Content {
+        padding: 0 16px;
+    }
+
+    footer {
+        bottom: 0;
+        left: 0;
+        right: 0;
+        display: block;
+        position: fixed;
+        padding: 0 16px 0.6cm;
+        color: #ccc;
+        font-size: 10px;
+        text-align: center;
+    }
+
+    #Skills section ul li {
+        max-width: 220px;
+        min-width: 130px;
+    }
+
+    #Employement h3 {
+        display: block;
+    }
+
+    .Employement__date {
+        margin-right: 10px;
+        width: 25%;
+        display: inline-block;
+        letter-spacing: inherit;
+        font-variant: small-caps;
+    }
+
+    .Actions {
+        display: none;
+    }
+}

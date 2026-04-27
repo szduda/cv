@@ -1,0 +1,20 @@
+---
+interface Props {
+  title: string;
+  url: string;
+  imageUrl: string;
+}
+
+const { title, url, imageUrl } = Astro.props;
+---
+
+<article>
+  <img src={imageUrl} alt={title} class="w-full rounded object-cover object-top aspect-video" loading="lazy" />
+  <h3 class="mb-2 mt-3 flex items-center text-2xl text-[#F0B356]">
+    {title}
+    <a href={url} target="_blank" class="ml-2 inline-flex p-1" rel="noreferrer noopener">
+      <img src="/images/link.svg" alt="External link" class="h-6 w-6" />
+    </a>
+  </h3>
+  <p><slot /></p>
+</article>

@@ -1,0 +1,134 @@
+{
+  "meta": {
+    "lang": "en",
+    "description": "JavaScript, Python and C# engineer with broad commercial software experience."
+  },
+  "person": {
+    "name": "Szymon Duda",
+    "phoneLabel": "Phone",
+    "emailLabel": "E-mail",
+    "phone": "722 321 591",
+    "phoneHref": "tel:722321591",
+    "email": "szymon.piotr.duda@gmail.com",
+    "emailHref": "mailto:szymon.piotr.duda@gmail.com"
+  },
+  "intro": [
+    "I have 13 years of commercial experience in software engineering. I work in JavaScript, Python, and C#.",
+    "I have worked across frontend and UX design as well as backend development, database programming, and device communication.",
+    "As an independent contractor, I have successfully delivered and deployed solutions that improve small business operations. In recent years I have focused on frontend technologies, with a stack centered around React.",
+    "In my spare time, I do photojournalism and design and program IoT devices. I play in a percussion band and enjoy mountain hiking."
+  ],
+  "skills": {
+    "title": "Skills",
+    "items": [
+      {
+        "title": "Front-end",
+        "list": [
+          "React",
+          "NextJS",
+          "TypeScript",
+          "HTML",
+          "Web API",
+          "CSS (SaSS, Less, PostCSS, BEM, Flexbox, CSS-in-JS, Tailwind, CSS modules)",
+          "Vue.js (Vue Storefront)",
+          "LEGACY",
+          "Angular.JS (1.5)",
+          "WebForms, WinForms, Razor"
+        ]
+      },
+      {
+        "title": "Back-end",
+        "list": ["ASP.NET MVC", "REST", "GraphQL", "PL/SQL", "T-SQL", "RabbitMQ"]
+      },
+      {
+        "title": "Other",
+        "list": [".NETCF", "Device integrations (Serial, TCP, UDP, ActiveSync, RFID)"]
+      }
+    ]
+  },
+  "projects": {
+    "title": "Featured Projects",
+    "items": [
+      {
+        "title": "Ascopharm",
+        "url": "https://ascopharm.de",
+        "image": "/images/ascopharm.jpg",
+        "imageAlt": "Screenshot of Ascopharm website",
+        "description": "E-commerce website for a distributor of dietary supplements and health-supporting products."
+      },
+      {
+        "title": "Styrerommet",
+        "url": "https://styrerommet.no",
+        "image": "/images/styrerommet.jpg",
+        "imageAlt": "Screenshot of Styrerommet app",
+        "description": "Modular web application for housing cooperatives supporting board workflows, safety, and internal processes."
+      },
+      {
+        "title": "Kongsberg Digital",
+        "url": "https://www.kongsberg.com/digital/",
+        "image": "/images/kognifai.jpg",
+        "imageAlt": "Screenshot of Kongsberg Digital website",
+        "description": "Company websites presenting business profile details and product or service information."
+      }
+    ]
+  },
+  "tools": {
+    "title": "Tools",
+    "items": [
+      {
+        "title": "Implementation",
+        "list": ["Visual Studio", "VS Code", "JetBrains Rider", "Storybook", "Webpack", "Gulp"]
+      },
+      {
+        "title": "Version control",
+        "list": ["Git", "GitLab", "VSTS", "GitHub", "BitBucket"]
+      },
+      {
+        "title": "Project",
+        "list": ["VSTS", "Monday", "Mural", "JIRA"]
+      },
+      {
+        "title": "Graphics",
+        "list": ["Photoshop", "Lightroom", "Invision", "Zeppelin", "Abstract"]
+      },
+      {
+        "title": "Other",
+        "list": ["Azure", "Travis", "Chromatic", "Jest", "Formatters, Linters"]
+      }
+    ]
+  },
+  "employment": {
+    "title": "Work experience",
+    "items": [
+      {
+        "title": "Work experience",
+        "list": [
+          "November 2016 - present - Self-employment - software for small businesses, project support",
+          "March 2020 - October 2020 - Front-end developer at Navarra Lab",
+          "February 2020 (project suspended) - Front-end developer at Code and Pepper",
+          "January 2018 - July 2019 - Full-stack developer at Forte_ Digital",
+          "January 2014 - June 2017 - Software developer at Comarch",
+          "February 2013 - Individual assignment for a private healthcare office"
+        ]
+      }
+    ]
+  },
+  "education": {
+    "title": "Education",
+    "items": [
+      {
+        "title": "University",
+        "list": ["Computer Science and Econometrics, Faculty of Management, AGH University of Science and Technology (2011-2016)"]
+      },
+      {
+        "title": "Courses",
+        "list": ["Designing ergonomic user interfaces (2017)"]
+      },
+      {
+        "title": "Foreign languages",
+        "list": ["English (fluent, C1 certificate)", "French (basic)"]
+      }
+    ]
+  },
+  "footer": "I agree to the processing of my personal data for recruitment purposes."
+}

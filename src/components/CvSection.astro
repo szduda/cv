@@ -1,0 +1,35 @@
+---
+interface Props {
+  title: string;
+  inverted?: boolean;
+  sectionClass?: string;
+  contentClass?: string;
+  titleClass?: string;
+}
+
+const innerClasses = "max-w-5xl px-4 mx-auto"
+
+const { title, inverted = false, sectionClass = "", contentClass = "", titleClass = "" } = Astro.props;
+
+---
+
+<section
+  class:list={[
+    "py-12 md:py-20",
+    inverted ? "bg-[#27323F] text-[#E7E5DF]" : "",
+    sectionClass
+  ]}
+>
+  <div class:list={[innerClasses, contentClass]}>
+    <h2
+      class:list={[
+        "mb-8 border-b-2 border-[#3BA590] pb-2 text-3xl font-semibold md:text-4xl",
+        inverted ? "text-[#E7E5DF]" : "text-[#1B222B]",
+        titleClass
+      ]}
+    >
+      {title}
+    </h2>
+    <slot />
+  </div>
+</section>

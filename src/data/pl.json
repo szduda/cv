@@ -1,0 +1,134 @@
+{
+  "meta": {
+    "lang": "pl",
+    "description": "Programista JavaScript, Python i C# z wieloletnim doświadczeniem komercyjnym."
+  },
+  "person": {
+    "name": "Szymon Duda",
+    "phoneLabel": "Telefon",
+    "emailLabel": "E-mail",
+    "phone": "722 321 591",
+    "phoneHref": "tel:722321591",
+    "email": "szymon.piotr.duda@gmail.com",
+    "emailHref": "mailto:szymon.piotr.duda@gmail.com"
+  },
+  "intro": [
+    "Posiadam 13-letnie komercyjne doświadczenie w zakresie inżynierii oprogramowania. Pracuję w językach JavaScript, Python i C#.",
+    "Zajmowałem się zagadnieniami front-endu i projektowania UX, jak i back-endu, programowania baz danych oraz komunikacji z urządzeniami.",
+    "W ramach działalności gospodarczej z sukcesem zrealizowałem i wdrożyłem rozwiązania usprawniające pracę małych przedsiębiorstw. Ostatnie lata rozwoju zawodowego poświęciłem specjalizacji w technologiach frontendowych, ze stosem zorientowanym wokół React.",
+    "Hobbystycznie zajmuję się fotoreportażem oraz projektowaniem i programowaniem urządzeń IoT. Gram w zespole perkusyjnym. Lubię górskie wycieczki."
+  ],
+  "skills": {
+    "title": "Umiejętności",
+    "items": [
+      {
+        "title": "Front-end",
+        "list": [
+          "React",
+          "NextJS",
+          "TypeScript",
+          "HTML",
+          "Web API",
+          "CSS (SaSS, Less, PostCSS, BEM, Flexbox, CSS-in-JS, Tailwind, CSS modules)",
+          "Vue.js (Vue Storefront)",
+          "LEGACY",
+          "Angular.JS (1.5)",
+          "WebForms, WinForms, Razor"
+        ]
+      },
+      {
+        "title": "Back-end",
+        "list": ["ASP.NET MVC", "REST", "GraphQL", "PL/SQL", "T-SQL", "RabbitMQ"]
+      },
+      {
+        "title": "Inne",
+        "list": [".NETCF", "Integracje z urządzeniami (Serial, TCP, UDP, ActiveSync, RFID)"]
+      }
+    ]
+  },
+  "projects": {
+    "title": "Wybrane projekty",
+    "items": [
+      {
+        "title": "Ascopharm",
+        "url": "https://ascopharm.de",
+        "image": "/images/ascopharm.jpg",
+        "imageAlt": "Zrzut ekranu sklepu Ascopharm",
+        "description": "Witryna sklepu internetowego dystrybutora suplementów diety i produktów wspierających zdrowie."
+      },
+      {
+        "title": "Styrerommet",
+        "url": "https://styrerommet.no",
+        "image": "/images/styrerommet.jpg",
+        "imageAlt": "Zrzut ekranu aplikacji Styrerommet",
+        "description": "Modułowa aplikacja dla wspólnot mieszkaniowych wspierająca procedury zarządu, bezpieczeństwo i rozliczenia."
+      },
+      {
+        "title": "Kongsberg Digital",
+        "url": "https://www.kongsberg.com/digital/",
+        "image": "/images/kognifai.jpg",
+        "imageAlt": "Zrzut ekranu strony Kongsberg Digital",
+        "description": "Serwisy firmy Kongsberg prezentujące profil organizacji oraz szczegóły usług i produktów."
+      }
+    ]
+  },
+  "tools": {
+    "title": "Narzędzia",
+    "items": [
+      {
+        "title": "Implementacja",
+        "list": ["Visual Studio", "VS Code", "JetBrains Rider", "Storybook", "Webpack", "Gulp"]
+      },
+      {
+        "title": "Kontrola wersji",
+        "list": ["Git", "GitLab", "VSTS", "GitHub", "BitBucket"]
+      },
+      {
+        "title": "Projekt",
+        "list": ["VSTS", "Monday", "Mural", "JIRA"]
+      },
+      {
+        "title": "Grafika",
+        "list": ["Photoshop", "Lightroom", "Invision", "Zeppelin", "Abstract"]
+      },
+      {
+        "title": "Inne",
+        "list": ["Azure", "Travis", "Chromatic", "Jest", "Formatters, Linters"]
+      }
+    ]
+  },
+  "employment": {
+    "title": "Zatrudnienie",
+    "items": [
+      {
+        "title": "Zatrudnienie",
+        "list": [
+          "od listopada 2016 - Działalność gospodarcza - oprogramowanie dla małych firm, wsparcie projektów",
+          "marzec 2020 - październik 2020 - Front-end developer w Navarra Lab",
+          "luty 2020 (projekt zawieszony) - Front-end developer w Code and Pepper",
+          "styczeń 2018 - lipiec 2019 - Full-stack developer w Forte_ Digital",
+          "styczeń 2014 - czerwiec 2017 - Software developer w Comarch",
+          "luty 2013 - Zlecenie indywidualne dla NZOZ"
+        ]
+      }
+    ]
+  },
+  "education": {
+    "title": "Edukacja",
+    "items": [
+      {
+        "title": "Studia",
+        "list": ["Informatyka i Ekonometria, Wydział Zarządzania, Akademia Górniczo-Hutnicza (2011-2016)"]
+      },
+      {
+        "title": "Kursy",
+        "list": ["Projektowanie ergonomicznych interfejsów użytkownika (2017)"]
+      },
+      {
+        "title": "Języki obce",
+        "list": ["Angielski (biegle, certyfikat C1)", "Francuski (podstawowy)"]
+      }
+    ]
+  },
+  "footer": "Wyrażam zgodę na przetwarzanie moich danych osobowych w celu prowadzenia rekrutacji."
+}

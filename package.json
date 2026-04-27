@@ -1,0 +1,16 @@
+{
+  "name": "cv-landing",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview"
+  },
+  "devDependencies": {
+    "@astrojs/tailwind": "^6.0.2",
+    "astro": "^6.1.9",
+    "tailwindcss": "^3.4.17"
+  }
+}

@@ -1,0 +1,12 @@
+---
+description: Avoid unnecessary npm build runs during normal edits
+alwaysApply: true
+---
+
+# Build Command Policy
+
+- Do not run `npm run build` after every change.
+- Assume the user validates changes through the dev server.
+- Only run build or other heavy verification commands when:
+  - the user explicitly asks for it, or
+  - a blocker cannot be resolved without running it.
