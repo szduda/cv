@@ -19,7 +19,7 @@ const { data, alternateHref, alternateFlagSrc, alternateFlagAlt, pdfHref } =
 const withBase = (value: string) =>
   value.startsWith("http://") || value.startsWith("https://")
     ? value
-    : `${import.meta.env.BASE_URL}${value.replace(/^\/+/, "")}`;
+    : `${import.meta.env.BASE_URL.replace(/\/?$/, "/")}${value.replace(/^\/+/, "")}`;
 ---
 
 <!doctype html>
