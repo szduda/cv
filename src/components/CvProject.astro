@@ -19,7 +19,7 @@ const withBase = (value: string) =>
   {
     hasImage ? (
       <img
-        src={imageUrl}
+        src={withBase(imageUrl!)}
         alt={imageAlt ?? title}
         class="w-full rounded object-cover object-top aspect-video"
         loading="lazy"

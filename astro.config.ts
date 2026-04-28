@@ -3,13 +3,14 @@ import { defineConfig } from "astro/config";
 
 declare const process: {
   env: Record<string, string | undefined>;
+  argv: string[];
 };
 
-const isProductionBuild = process.env.NODE_ENV === "production";
+const isBuildCommand = process.argv.includes("build");
 
 export default defineConfig({
   site: "https://szduda.github.io",
-  base: isProductionBuild ? "/cv" : "/",
+  base: isBuildCommand ? "/cv" : "/",
   output: "static",
   vite: {
     plugins: [tailwindcss()],
