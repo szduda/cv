@@ -1,6 +1,7 @@
 ---
 import "../styles/global.css";
 import type { CvData } from "../types/cv-data";
+import { withBase } from "../utils/withBase";
 import CvList from "./CvList.astro";
 import CvTimeline from "./CvTimeline.astro";
 import CvProject from "./CvProject.astro";
@@ -16,10 +17,11 @@ interface Props {
 
 const { data, alternateHref, alternateFlagSrc, alternateFlagAlt, pdfHref } =
   Astro.props;
-const withBase = (value: string) =>
-  value.startsWith("http://") || value.startsWith("https://")
-    ? value
-    : `${import.meta.env.BASE_URL.replace(/\/?$/, "/")}${value.replace(/^\/+/, "")}`;
+
+const withProjectBase = (value: string) => withBase(value, import.meta.env.BASE_URL);
+const featuredProjectsPreviewCount = 4;
+const hasMoreFeaturedProjects =
+  data.projects.items.length > featuredProjectsPreviewCount;
 ---
 
 <!doctype html>
@@ -40,23 +42,23 @@ const withBase = (value: string) =>
         >
           <div class="fixed right-2 top-5 z-20 flex items-center gap-0.5 print-hidden">
             <a
-              href={withBase(pdfHref)}
+              href={withProjectBase(pdfHref)}
               download
               class="inline-flex rounded p-2 transition hover:bg-white/10"
               aria-label={data.pdfDownloadLabel}
             >
               <img
-                src={withBase("/images/pdf.svg")}
+                src={withProjectBase("/images/pdf.svg")}
                 alt=""
                 class="h-6 w-6 brightness-0 invert opacity-90"
               />
             </a>
             <a
-              href={withBase(alternateHref)}
+              href={withProjectBase(alternateHref)}
               class="inline-flex rounded p-2 transition hover:bg-white/10"
             >
               <img
-                src={withBase(alternateFlagSrc)}
+                src={withProjectBase(alternateFlagSrc)}
                 alt={alternateFlagAlt}
                 class="h-6 w-6"
               />
@@ -70,7 +72,7 @@ const withBase = (value: string) =>
           >
             <div class="flex items-center">
               <img
-                src={withBase("/images/phone.svg")}
+                src={withProjectBase("/images/phone.svg")}
                 alt={data.person.phoneLabel}
                 class="mr-3 h-6 w-6"
               />
@@ -82,7 +84,7 @@ const withBase = (value: string) =>
             </div>
             <div class="flex items-center">
               <img
-                src={withBase("/images/email.svg")}
+                src={withProjectBase("/images/email.svg")}
                 alt={data.person.emailLabel}
                 class="mr-3 h-6 w-6"
               />
@@ -113,7 +115,7 @@ const withBase = (value: string) =>
       </section>
 
       <CvSection title={data.skills.title}>
-        <div class="grid gap-10 md:grid-cols-3">
+        <div class="grid gap-10 md:grid-cols-2 lg:grid-cols-4">
           {
             data.skills.items.map((item) => (
               <CvList title={item.title} items={item.list} />
@@ -129,22 +131,46 @@ const withBase = (value: string) =>
       >
         <div class="grid gap-16 md:grid-cols-2">
           {
-            data.projects.items.map((project) => (
-              <CvProject
-                title={project.title}
-                url={project.url}
-                imageUrl={project.image}
-                imageAlt={project.imageAlt}
+            data.projects.items.map((project, index) => (
+              <div
+                class:list={[
+                  index >= featuredProjectsPreviewCount ? "js-featured-project-extra hidden" : "",
+                ]}
               >
-                {project.description}
-              </CvProject>
+                <CvProject
+                  title={project.title}
+                  url={project.url}
+                  imageUrl={project.image}
+                  imageAlt={project.imageAlt}
+                >
+                  {project.description}
+                </CvProject>
+              </div>
             ))
           }
         </div>
+        {
+          hasMoreFeaturedProjects ? (
+            <button
+              type="button"
+              class="js-featured-projects-expand mt-10 flex w-full items-center gap-4 rounded-md text-[#E7E5DF] transition hover:bg-white/10 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#3BA590] cursor-pointer"
+            >
+              <span class="h-0 w-full border-t-2 border-[#3BA590]" aria-hidden="true" />
+              <div class="whitespace-nowrap text-xs font-semibold tracking-wide md:text-sm flex flex-col items-center gap-0.5 opacity-50 uppercase">
+                {data.projects.moreProjectsButton}
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16" aria-hidden="true">
+                  <path fill-rule="evenodd" d="M1.646 6.646a.5.5 0 0 1 .708 0L8 12.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708"></path>
+                  <path fill-rule="evenodd" d="M1.646 2.646a.5.5 0 0 1 .708 0L8 8.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708"></path>
+                </svg>
+              </div>
+              <span class="h-0 w-full border-t-2 border-[#3BA590]" aria-hidden="true" />
+            </button>
+          ) : null
+        }
       </CvSection>
 
       <CvSection title={data.tools.title} sectionClass="tools-section">
-        <div class="grid gap-10 md:grid-cols-3">
+        <div class="grid gap-10 md:grid-cols-2 lg:grid-cols-4">
           {
             data.tools.items.map((item) => (
               <CvList title={item.title} items={item.list} />
@@ -178,5 +204,20 @@ const withBase = (value: string) =>
     <footer class="mx-auto max-w-5xl px-4 py-8 text-sm text-[#666]">
       {data.footer}
     </footer>
+    {
+      hasMoreFeaturedProjects ? (
+        <script>
+          document
+            .querySelector(".js-featured-projects-expand")
+            ?.addEventListener("click", (event) => {
+              const expandButton = event.currentTarget as HTMLElement;
+              expandButton.classList.add("hidden");
+              document
+                .querySelectorAll(".js-featured-project-extra")
+                .forEach((project) => project.classList.remove("hidden"));
+            });
+        </script>
+      ) : null
+    }
   </body>
 </html>

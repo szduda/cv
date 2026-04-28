@@ -10,6 +10,18 @@ const { title, items } = Astro.props;
 <article>
   <h3 class="mb-2 text-lg text-[#888]">{title}</h3>
   <ul class="space-y-2 border-l border-[#d9d9d9] pl-3">
-    {items.map((item) => <li>{item as any}</li>)}
+    {
+      items.map((item) => (
+        <li
+          class:list={[
+            typeof item === "string" && item.startsWith("//")
+              ? "opacity-30 font-semibold before:!hidden print:-translate-x-5 uppercase !list-none"
+              : "",
+          ]}
+        >
+          {item as any}
+        </li>
+      ))
+    }
   </ul>
 </article>

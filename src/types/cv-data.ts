@@ -48,6 +48,7 @@ export interface CvData {
   };
   projects: {
     title: string;
+    moreProjectsButton: string;
     items: ProjectItem[];
   };
   tools: GenericSection;

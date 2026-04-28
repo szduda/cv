@@ -7,8 +7,8 @@
     "name": "Szymon Duda",
     "phoneLabel": "Phone",
     "emailLabel": "E-mail",
-    "phone": "722 321 591",
-    "phoneHref": "tel:722321591",
+    "phone": "+48 722-321-591",
+    "phoneHref": "tel:+48722321591",
     "email": "szymon.piotr.duda@gmail.com",
     "emailHref": "mailto:szymon.piotr.duda@gmail.com"
   },
@@ -24,50 +24,140 @@
         "title": "Front-end",
         "list": [
           "React",
-          "NextJS",
+          "Next.JS",
           "TypeScript",
-          "HTML",
+          "HTML & templating",
           "Web API",
-          "CSS (SaSS, Less, PostCSS, BEM, Flexbox, CSS-in-JS, Tailwind, CSS modules)",
-          "Vue.js (Vue Storefront)",
-          "LEGACY",
-          "Angular.JS (1.5)",
-          "WebForms, WinForms, Razor"
+          "CSS (SaSS, Less, PostCSS, BEM, Flexbox, CSS-in-JS, Tailwind, CSS modules)"
         ]
       },
       {
         "title": "Back-end",
-        "list": ["ASP.NET MVC", "REST", "GraphQL", "PL/SQL", "T-SQL", "RabbitMQ"]
+        "list": [
+          "Next.JS",
+          "Express",
+          "REST",
+          "PostgreSQL, MSSQL, Oracle, MySQL",
+          "Tauri",
+          "ASP.NET MVC",
+          "GraphQL",
+          "RabbitMQ"
+        ]
+      },
+      {
+        "title": "DevOps",
+        "list": [
+          "CI/CD automation",
+          "Development and test environment automation",
+          "Deployment configuration"
+        ]
       },
       {
         "title": "Other",
-        "list": [".NETCF", "Device integrations (Serial, TCP, UDP, ActiveSync, RFID)"]
+        "list": [
+          "Functional programming",
+          "Device integrations (Serial, TCP, UDP, ActiveSync, RFID)",
+          "Vue.js (Vue Storefront)",
+          "// legacy",
+          ".NETCF",
+          "Angular.JS",
+          "WebForms, WinForms, Razor"
+        ]
       }
     ]
   },
   "projects": {
     "title": "Featured Projects",
+    "moreProjectsButton": "Show more",
     "items": [
       {
-        "title": "Ascopharm",
+        "title": "SaaS - social content analytics",
+        "description": "Project for a US SaaS company specializing in social media analytics, TV broadcast analysis, and brand monitoring. Web applications supporting marketing data analysis, reporting, and integrations with external social platforms.",
+        "image": "/images/saas-exposures.png",
+        "imageAlt": "Screenshot of SaaS app - brand exposure analytics in media",
+        "tags": [
+          "React",
+          "Mantine",
+          "AWS",
+          "C#/Angular.js "
+        ]
+      },
+      {
+        "title": "E-Commerce - consumer goods",
+        "description": "Storefront, Store Locator, and a component library based on Atomic Design for one of the largest consumer e-commerce brands in its category worldwide, operating in a heavily regulated market.",
+        "tags": [
+          "Next.JS",
+          "Swell",
+          "Vercel",
+          "Elasticsearch"
+        ]
+      },
+      {
+        "title": "E-Commerce - Arigato Food",
+        "description": "Online store for a healthy food brand integrated with Swell e-commerce and the PayU payment gateway. Partial integrations with InPost Parcel Manager and Furgonetka. Additional order monitoring panel for store staff.",
+        "url": "https://arigato-food.com",
+        "image": "/images/arigato-food.png",
+        "imageAlt": "Screenshot of Arigato Food online store",
+        "tags": [
+          "Next.JS",
+          "Tailwind",
+          "turbo",
+          "Swell",
+          "Vercel",
+          "PayU"
+        ]
+      },
+      {
+        "title": "Dunsy.app - drum sequencer",
+        "description": "Web application supporting drum practice. Implements a text-graphic notation system and enables playback of backing tracks at selected tempo and swing.",
+        "url": "https://dunsy.app",
+        "image": "/images/dunsy.png",
+        "imageAlt": "Screenshot of Dunsy.app",
+        "tags": [
+          "Web Audio API",
+          "Firebase",
+          "Next.JS SSG/SSR",
+          "App Router",
+          "Vercel"
+        ]
+      },
+      {
+        "title": "E-Commerce - Ascopharm",
         "url": "https://ascopharm.de",
         "image": "/images/ascopharm.jpg",
-        "imageAlt": "Screenshot of Ascopharm website",
-        "description": "E-commerce website for a distributor of dietary supplements and health-supporting products."
+        "imageAlt": "Screenshot of Ascopharm store",
+        "description": "E-commerce website for a distributor of dietary supplements and health-supporting products.",
+        "tags": [
+          "Vue.js",
+          "Vue Storefront",
+          "Magento"
+        ]
       },
       {
-        "title": "Styrerommet",
+        "title": "SaaS - Styrerommet",
         "url": "https://styrerommet.no",
         "image": "/images/styrerommet.jpg",
-        "imageAlt": "Screenshot of Styrerommet app",
-        "description": "Modular web application for housing cooperatives supporting board workflows, safety, and internal processes."
+        "imageAlt": "Screenshot of Styrerommet application",
+        "description": "Modular application for a network of housing associations supporting board procedures, security, and settlements.",
+        "tags": [
+          "NextJS",
+          "Pages Router",
+          "GraphQL",
+          "Apollo"
+        ]
       },
       {
-        "title": "Kongsberg Digital",
+        "title": "CMS - Kongsberg Digital",
         "url": "https://www.kongsberg.com/digital/",
         "image": "/images/kognifai.jpg",
         "imageAlt": "Screenshot of Kongsberg Digital website",
-        "description": "Company websites presenting business profile details and product or service information."
+        "description": "Kongsberg company websites presenting organization profile and details of services and products.",
+        "tags": [
+          "C# MVC",
+          "JavaScript",
+          "EPiServer",
+          "Azure"
+        ]
       }
     ]
   },
@@ -76,23 +166,41 @@
     "items": [
       {
         "title": "Implementation",
-        "list": ["Visual Studio", "VS Code", "JetBrains Rider", "Storybook", "Webpack", "Gulp"]
+        "list": [
+          "Cursor",
+          "VS Code, Pycharm, Visual Studio",
+          "Storybook",
+          "Webpack, Vite, Astro, Parcel, Tauri"
+        ]
       },
       {
-        "title": "Version control",
-        "list": ["Git", "GitLab", "VSTS", "GitHub", "BitBucket"]
-      },
-      {
-        "title": "Project",
-        "list": ["VSTS", "Monday", "Mural", "JIRA"]
+        "title": "DevOps",
+        "list": [
+          "Azure, GitHub Actions, GitHub Pages, Vercel",
+          "Git, GitHub, TFS, BitBucket, GitLab"
+        ]
       },
       {
         "title": "Graphics",
-        "list": ["Photoshop", "Lightroom", "Invision", "Zeppelin", "Abstract"]
+        "list": [
+          "Figma",
+          "Onshape",
+          "Final Cut Pro",
+          "Photoshop",
+          "Lightroom",
+          "Invision",
+          "Zeppelin",
+          "Abstract"
+        ]
       },
       {
         "title": "Other",
-        "list": ["Azure", "Travis", "Chromatic", "Jest", "Formatters, Linters"]
+        "list": [
+          "Monday, JIRA, VSTS, Mural",
+          "Chromatic",
+          "Jest, Vitest",
+          "ESlint, Prettier"
+        ]
       }
     ]
   },

@@ -1,4 +1,6 @@
 ---
+import { withBase } from "../utils/withBase";
+
 interface Props {
   title: string;
   url?: string;
@@ -9,42 +11,41 @@ interface Props {
 const { title, url, imageUrl, imageAlt } = Astro.props;
 const hasUrl = Boolean(url?.trim());
 const hasImage = Boolean(imageUrl?.trim());
-const withBase = (value: string) =>
-  value.startsWith("http://") || value.startsWith("https://")
-    ? value
-    : `${import.meta.env.BASE_URL.replace(/\/?$/, "/")}${value.replace(/^\/+/, "")}`;
 ---
 
 <article>
   {
     hasImage ? (
       <img
-        src={withBase(imageUrl!)}
+        src={withBase(imageUrl!, import.meta.env.BASE_URL)}
         alt={imageAlt ?? title}
-        class="w-full rounded object-cover object-top aspect-video"
+        class="w-full rounded object-cover object-top aspect-video bg-gray-600"
         loading="lazy"
       />
     ) : (
-      <div
-        class="w-full rounded aspect-video bg-gray-600"
-        aria-hidden="true"
-      />
+      <div class="w-full rounded aspect-video bg-gray-600" aria-hidden="true" />
     )
   }
   <h3 class="mb-2 mt-3 flex items-center text-2xl text-[#F0B356]">
-    {title}
     {
       hasUrl ? (
         <a
           href={url}
           target="_blank"
-          class="ml-2 inline-flex rounded-md p-1 transition-colors hover:bg-white/20"
+          class="flex items-baseline justify-between gap-4 rounded-md py-1 transition-colors hover:bg-white/20"
           rel="noreferrer noopener"
           aria-label={`${title} (external link)`}
         >
-          <img src={withBase("/images/link.svg")} alt="" class="h-6 w-6" />
+          <span>{title}</span>
+          <img
+            src={withBase("/images/link.svg", import.meta.env.BASE_URL)}
+            alt=""
+            class="h-6 w-6"
+          />
         </a>
-      ) : null
+      ) : (
+        title
+      )
     }
   </h3>
   <p><slot /></p>

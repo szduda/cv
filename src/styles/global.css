@@ -39,6 +39,11 @@
     margin: 0 0 8px 0 !important;
   }
 
+  h3 {
+    font-size: 11px !important;
+    opacity: 0.7 !important;
+  }
+
   img,
   svg,
   button,
@@ -85,12 +90,12 @@
 
   .grid {
     display: grid !important;
-    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    grid-template-columns: repeat(4, minmax(0, 1fr)) !important;
     gap: 8px !important;
   }
 
   .tools-section .grid {
-    grid-template-columns: repeat(5, minmax(0, 1fr)) !important;
+    grid-template-columns: repeat(4, minmax(0, 1fr)) !important;
     gap: 6px !important;
   }
 
@@ -152,10 +157,12 @@
 
   ul {
     padding-left: 10px !important;
+    border-left: none;
   }
 
   p,
   li {
-    margin-bottom: 2px !important;
+    list-style-type: circle;
+    margin-bottom: 8px !important;
   }
 }

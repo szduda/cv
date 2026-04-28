@@ -7,8 +7,8 @@
     "name": "Szymon Duda",
     "phoneLabel": "Telefon",
     "emailLabel": "E-mail",
-    "phone": "722 321 591",
-    "phoneHref": "tel:722321591",
+    "phone": "722-321-591",
+    "phoneHref": "tel:+48722321591",
     "email": "szymon.piotr.duda@gmail.com",
     "emailHref": "mailto:szymon.piotr.duda@gmail.com"
   },
@@ -24,68 +24,140 @@
         "title": "Front-end",
         "list": [
           "React",
-          "NextJS",
+          "Next.JS",
           "TypeScript",
-          "HTML",
+          "HTML & szablonowanie",
           "Web API",
-          "CSS (SaSS, Less, PostCSS, BEM, Flexbox, CSS-in-JS, Tailwind, CSS modules)",
-          "Vue.js (Vue Storefront)",
-          "LEGACY",
-          "Angular.JS (1.5)",
-          "WebForms, WinForms, Razor"
+          "CSS (SaSS, Less, PostCSS, BEM, Flexbox, CSS-in-JS, Tailwind, CSS modules)"
         ]
       },
       {
         "title": "Back-end",
         "list": [
-          "ASP.NET MVC",
+          "Next.JS",
+          "Express",
           "REST",
+          "PostgreSQL, MSSQL, Oracle, MySQL",
+          "Tauri",
+          "ASP.NET MVC",
           "GraphQL",
-          "PL/SQL",
-          "T-SQL",
           "RabbitMQ"
+        ]
+      },
+      {
+        "title": "DevOps",
+        "list": [
+          "Automatyzacja CI/CD",
+          "Automatyzacja środowisk deweloperskich i testowych",
+          "Konfiguracja wdrożeń"
         ]
       },
       {
         "title": "Inne",
         "list": [
+          "Programowanie funkcjonalne",
+          "Integracje z urządzeniami (Serial, TCP, UDP, ActiveSync, RFID)",
+          "Vue.js (Vue Storefront)",
+          "// legacy",
           ".NETCF",
-          "Integracje z urządzeniami (Serial, TCP, UDP, ActiveSync, RFID)"
+          "Angular.JS",
+          "WebForms, WinForms, Razor"
         ]
       }
     ]
   },
   "projects": {
     "title": "Wybrane projekty",
+    "moreProjectsButton": "Pokaż więcej",
     "items": [
       {
         "title": "SaaS - analityka treści społecznościowych",
-        "description": "Projekt dla międzynarodowej firmy SaaS specjalizującej się w analityce mediów społecznościowych, analizie transmisji telewizyjnej i monitoringu marki. Aplikacje webowe wspierające analizę danych marketingowych, raportowanie oraz integracje z zewnętrznymi platformami społecznościowymi."
+        "description": "Projekt dla amerykańskiej firmy SaaS specjalizującej się w analityce mediów społecznościowych, analizie transmisji telewizyjnej i monitoringu marki. Aplikacje webowe wspierające analizę danych marketingowych, raportowanie oraz integracje z zewnętrznymi platformami społecznościowymi.",
+        "image": "/images/saas-exposures.png",
+        "imageAlt": "Zrzut ekranu aplikacji SaaS - analityka ekspozycji marki w mediach",
+        "tags": [
+          "React",
+          "Mantine",
+          "AWS",
+          "C#/Angular.js "
+        ]
       },
       {
         "title": "E-Commerce - artykuły konsumenckie",
-        "description": "Storefront, Store Locator oraz Biblioteka Komponentów w systemie Atom Design dla jednego z największych consumer e-commerce brandów swojej kategorii na świecie, działającego na mocno regulowanym rynku."
+        "description": "Storefront, Store Locator oraz Biblioteka Komponentów w systemie Atom Design dla jednego z największych consumer e-commerce brandów swojej kategorii na świecie, działającego na mocno regulowanym rynku.",
+        "tags": [
+          "Next.JS",
+          "Swell",
+          "Vercel",
+          "Elasticsearch"
+        ]
+      },
+      {
+        "title": "E-Commerce - Arigato Food",
+        "description": "Sklep internetowy dla marki zdrowej żywności zintegrowany z Swell - e-commerce oraz PayU - bramką płatności. Częściowe integracje z Manager Paczek InPost oraz serwisem Furgonetka. Dodatkowy panel monitorowania zamówień dla pracowników sklepu.",
+        "url": "https://arigato-food.com",
+        "image": "/images/arigato-food.png",
+        "imageAlt": "Zrzut ekranu sklepu internetowego Arigato Food",
+        "tags": [
+          "Next.JS",
+          "Tailwind",
+          "turbo",
+          "Swell",
+          "Vercel",
+          "PayU"
+        ]
+      },
+      {
+        "title": "Dunsy.app - sekwencer perkusyjny",
+        "description": "Aplikacja Webowa wspomagająca trening perkusyjny. Implementuje tekstowo-graficzny zapis nutowy i umożliwia odtwarzanie podkładów muzycznych w zadanym tempie czy swingu.",
+        "url": "https://dunsy.app",
+        "image": "/images/dunsy.png",
+        "imageAlt": "Zrzut ekranu aplikacji Dunsy.app",
+        "tags": [
+          "Web Audio API",
+          "Firebase",
+          "Next.JS SSG/SSR",
+          "App Router",
+          "Vercel"
+        ]
       },
       {
         "title": "E-Commerce - Ascopharm",
         "url": "https://ascopharm.de",
         "image": "/images/ascopharm.jpg",
         "imageAlt": "Zrzut ekranu sklepu Ascopharm",
-        "description": "Witryna sklepu internetowego dystrybutora suplementów diety i produktów wspierających zdrowie."
+        "description": "Witryna sklepu internetowego dystrybutora suplementów diety i produktów wspierających zdrowie.",
+        "tags": [
+          "Vue.js",
+          "Vue Storefront",
+          "Magento"
+        ]
       },
       {
         "title": "SaaS - Styrerommet",
         "url": "https://styrerommet.no",
         "image": "/images/styrerommet.jpg",
         "imageAlt": "Zrzut ekranu aplikacji Styrerommet",
-        "description": "Modułowa aplikacja dla sieci wspólnot mieszkaniowych wspierająca procedury zarządu, bezpieczeństwo i rozliczenia."
+        "description": "Modułowa aplikacja dla sieci wspólnot mieszkaniowych wspierająca procedury zarządu, bezpieczeństwo i rozliczenia.",
+        "tags": [
+          "NextJS",
+          "Pages Router",
+          "GraphQL",
+          "Apollo"
+        ]
       },
       {
         "title": "CMS - Kongsberg Digital",
         "url": "https://www.kongsberg.com/digital/",
         "image": "/images/kognifai.jpg",
         "imageAlt": "Zrzut ekranu strony Kongsberg Digital",
-        "description": "Serwisy firmy Kongsberg prezentujące profil organizacji oraz szczegóły usług i produktów."
+        "description": "Serwisy firmy Kongsberg prezentujące profil organizacji oraz szczegóły usług i produktów.",
+        "tags": [
+          "C# MVC",
+          "JavaScript",
+          "EPiServer",
+          "Azure"
+        ]
       }
     ]
   },
@@ -95,36 +167,25 @@
       {
         "title": "Implementacja",
         "list": [
-          "Visual Studio",
-          "VS Code",
-          "JetBrains Rider",
+          "Cursor",
+          "VS Code, Pycharm, Visual Studio",
           "Storybook",
-          "Webpack",
-          "Gulp"
+          "Webpack, Vite, Astro, Parcel, Tauri"
         ]
       },
       {
-        "title": "Kontrola wersji",
+        "title": "DevOps",
         "list": [
-          "Git",
-          "GitLab",
-          "VSTS",
-          "GitHub",
-          "BitBucket"
-        ]
-      },
-      {
-        "title": "Projekt",
-        "list": [
-          "VSTS",
-          "Monday",
-          "Mural",
-          "JIRA"
+          "Azure, GitHub Actions, GitHub Pages, Vercel",
+          "Git, GitHub, TFS, BitBucket, GitLab"
         ]
       },
       {
         "title": "Grafika",
         "list": [
+          "Figma",
+          "Onshape",
+          "Final Cut Pro",
           "Photoshop",
           "Lightroom",
           "Invision",
@@ -135,11 +196,10 @@
       {
         "title": "Inne",
         "list": [
-          "Azure",
-          "Travis",
+          "Monday, JIRA, VSTS, Mural",
           "Chromatic",
-          "Jest",
-          "Formatters, Linters"
+          "Jest, Vitest",
+          "ESlint, Prettier"
         ]
       }
     ]
@@ -150,7 +210,7 @@
       {
         "side": "right",
         "heading": "marzec 2021 - obecnie",
-        "text": "Senior Software Engineer w Sofomo - projekty dla USA - e-commerce, CMS, produkty cyfrowe, integracje, migracje, autmatyzacja CI/CD, leadowanie w mniejszych zespołach"
+        "text": "Senior Software Engineer w Sofomo - projekty dla USA - e-commerce, CMS, produkty cyfrowe, integracje, migracje, autmatyzacja CI/CD, funkcja leadera w mniejszych zespołach"
       },
       {
         "side": "left",
