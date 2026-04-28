@@ -36,12 +36,11 @@
         "list": [
           "Next.JS",
           "Express",
-          "REST",
+          "RESTful API, Web Hooks, WebSockets",
           "PostgreSQL, MSSQL, Oracle, MySQL",
           "Tauri",
-          "ASP.NET MVC",
-          "GraphQL",
-          "RabbitMQ"
+          "ASP.NET MVC, Web API",
+          "GraphQL, RabbitMQ"
         ]
       },
       {
@@ -61,7 +60,7 @@
           "// legacy",
           ".NETCF",
           "Angular.JS",
-          "WebForms, WinForms, Razor"
+          "WebForms, WinForms"
         ]
       }
     ]
@@ -71,13 +70,15 @@
     "moreProjectsButton": "Pokaż więcej",
     "items": [
       {
-        "title": "SaaS - analityka treści społecznościowych",
+        "title": "SaaS - analityka mediów",
         "description": "Projekt dla amerykańskiej firmy SaaS specjalizującej się w analityce mediów społecznościowych, analizie transmisji telewizyjnej i monitoringu marki. Aplikacje webowe wspierające analizę danych marketingowych, raportowanie oraz integracje z zewnętrznymi platformami społecznościowymi.",
         "image": "/images/saas-exposures.png",
         "imageAlt": "Zrzut ekranu aplikacji SaaS - analityka ekspozycji marki w mediach",
         "tags": [
           "React",
           "Mantine",
+          "TanStack",
+          "Recoil",
           "AWS",
           "C#/Angular.js "
         ]
@@ -87,9 +88,12 @@
         "description": "Storefront, Store Locator oraz Biblioteka Komponentów w systemie Atom Design dla jednego z największych consumer e-commerce brandów swojej kategorii na świecie, działającego na mocno regulowanym rynku.",
         "tags": [
           "Next.JS",
+          "Zustand",
           "Swell",
           "Vercel",
-          "Elasticsearch"
+          "Elasticsearch",
+          "Salesforce",
+          "Contentful"
         ]
       },
       {
@@ -176,8 +180,9 @@
       {
         "title": "DevOps",
         "list": [
-          "Azure, GitHub Actions, GitHub Pages, Vercel",
-          "Git, GitHub, TFS, BitBucket, GitLab"
+          "Azure, Vercel, GitHub Pages",
+          "CI/CD Actions & Workflow",
+          "Git CLI, TFS, BitBucket, GitLab"
         ]
       },
       {
@@ -188,9 +193,7 @@
           "Final Cut Pro",
           "Photoshop",
           "Lightroom",
-          "Invision",
-          "Zeppelin",
-          "Abstract"
+          "Invision, Zeppelin, Abstract"
         ]
       },
       {

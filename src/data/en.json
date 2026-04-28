@@ -36,12 +36,11 @@
         "list": [
           "Next.JS",
           "Express",
-          "REST",
+          "RESTful API, Web Hooks, WebSockets",
           "PostgreSQL, MSSQL, Oracle, MySQL",
           "Tauri",
-          "ASP.NET MVC",
-          "GraphQL",
-          "RabbitMQ"
+          "ASP.NET MVC, Web API",
+          "GraphQL, RabbitMQ"
         ]
       },
       {
@@ -61,7 +60,7 @@
           "// legacy",
           ".NETCF",
           "Angular.JS",
-          "WebForms, WinForms, Razor"
+          "WebForms, WinForms"
         ]
       }
     ]
@@ -71,7 +70,7 @@
     "moreProjectsButton": "Show more",
     "items": [
       {
-        "title": "SaaS - social content analytics",
+        "title": "SaaS - broadcast & social content analytics",
         "description": "Project for a US SaaS company specializing in social media analytics, TV broadcast analysis, and brand monitoring. Web applications supporting marketing data analysis, reporting, and integrations with external social platforms.",
         "image": "/images/saas-exposures.png",
         "imageAlt": "Screenshot of SaaS app - brand exposure analytics in media",
@@ -176,8 +175,9 @@
       {
         "title": "DevOps",
         "list": [
-          "Azure, GitHub Actions, GitHub Pages, Vercel",
-          "Git, GitHub, TFS, BitBucket, GitLab"
+          "Azure, Vercel, GitHub Pages",
+          "CI/CD Actions & Workflow",
+          "Git CLI, TFS, BitBucket, GitLab"
         ]
       },
       {
@@ -188,9 +188,7 @@
           "Final Cut Pro",
           "Photoshop",
           "Lightroom",
-          "Invision",
-          "Zeppelin",
-          "Abstract"
+          "Invision, Zeppelin, Abstract"
         ]
       },
       {
