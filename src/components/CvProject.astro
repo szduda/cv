@@ -9,6 +9,10 @@ interface Props {
 const { title, url, imageUrl, imageAlt } = Astro.props;
 const hasUrl = Boolean(url?.trim());
 const hasImage = Boolean(imageUrl?.trim());
+const withBase = (value: string) =>
+  value.startsWith("http://") || value.startsWith("https://")
+    ? value
+    : `${import.meta.env.BASE_URL}${value.replace(/^\/+/, "")}`;
 ---
 
 <article>
@@ -38,7 +42,7 @@ const hasImage = Boolean(imageUrl?.trim());
           rel="noreferrer noopener"
           aria-label={`${title} (external link)`}
         >
-          <img src="/images/link.svg" alt="" class="h-6 w-6" />
+          <img src={withBase("/images/link.svg")} alt="" class="h-6 w-6" />
         </a>
       ) : null
     }

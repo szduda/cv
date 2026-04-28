@@ -16,6 +16,10 @@ interface Props {
 
 const { data, alternateHref, alternateFlagSrc, alternateFlagAlt, pdfHref } =
   Astro.props;
+const withBase = (value: string) =>
+  value.startsWith("http://") || value.startsWith("https://")
+    ? value
+    : `${import.meta.env.BASE_URL}${value.replace(/^\/+/, "")}`;
 ---
 
 <!doctype html>
@@ -36,23 +40,23 @@ const { data, alternateHref, alternateFlagSrc, alternateFlagAlt, pdfHref } =
         >
           <div class="fixed right-2 top-5 z-20 flex items-center gap-0.5 print-hidden">
             <a
-              href={pdfHref}
+              href={withBase(pdfHref)}
               download
               class="inline-flex rounded p-2 transition hover:bg-white/10"
               aria-label={data.pdfDownloadLabel}
             >
               <img
-                src="/images/pdf.svg"
+                src={withBase("/images/pdf.svg")}
                 alt=""
                 class="h-6 w-6 brightness-0 invert opacity-90"
               />
             </a>
             <a
-              href={alternateHref}
+              href={withBase(alternateHref)}
               class="inline-flex rounded p-2 transition hover:bg-white/10"
             >
               <img
-                src={alternateFlagSrc}
+                src={withBase(alternateFlagSrc)}
                 alt={alternateFlagAlt}
                 class="h-6 w-6"
               />
@@ -66,7 +70,7 @@ const { data, alternateHref, alternateFlagSrc, alternateFlagAlt, pdfHref } =
           >
             <div class="flex items-center">
               <img
-                src="/images/phone.svg"
+                src={withBase("/images/phone.svg")}
                 alt={data.person.phoneLabel}
                 class="mr-3 h-6 w-6"
               />
@@ -78,7 +82,7 @@ const { data, alternateHref, alternateFlagSrc, alternateFlagAlt, pdfHref } =
             </div>
             <div class="flex items-center">
               <img
-                src="/images/email.svg"
+                src={withBase("/images/email.svg")}
                 alt={data.person.emailLabel}
                 class="mr-3 h-6 w-6"
               />

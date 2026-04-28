@@ -18,10 +18,12 @@ const publicPdfDir = path.join(root, "public", "pdf");
 const distPdfDir = path.join(distDir, "pdf");
 const port = Number(process.env.PDF_SERVE_PORT || 4179);
 const base = `http://127.0.0.1:${port}`;
+const rawSiteBasePath = process.env.PDF_SITE_BASE_PATH || "/cv/";
+const siteBasePath = `/${rawSiteBasePath.replace(/^\/+|\/+$/g, "")}/`;
 
 const routes = [
-  { urlPath: "/", file: "cv-pl.pdf" },
-  { urlPath: "/en/", file: "cv-en.pdf" },
+  { urlPath: `${siteBasePath}`, file: "cv-pl.pdf" },
+  { urlPath: `${siteBasePath}en/`, file: "cv-en.pdf" },
 ];
 
 async function pathExists(p) {
