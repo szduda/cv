@@ -29,7 +29,7 @@ const headingClass =
       items.map((item) => (
         <li class="cv-timeline-row grid grid-cols-[minmax(0,1fr)_2.75rem_minmax(0,1fr)] items-center gap-x-2 gap-y-2 md:grid-cols-[minmax(0,1fr)_3.5rem_minmax(0,1fr)] md:gap-x-4 print:mb-1">
           {item.side === "left" ? (
-            <div class="cv-timeline-cell -my-8 min-w-0 text-right text-sm leading-snug print:text-left md:text-base">
+            <div class="cv-timeline-cell -my-8 min-w-0 text-right text-sm leading-snug print:text-left md:text-base font-medium">
               <h3 class={headingClass}>{item.heading}</h3>
               {item.text ? <span set:html={item.text} /> : null}
             </div>
@@ -53,7 +53,7 @@ const headingClass =
           </div>
 
           {item.side === "right" ? (
-            <div class="cv-timeline-cell min-w-0 text-left text-sm leading-snug md:text-base">
+            <div class="cv-timeline-cell min-w-0 text-left text-sm leading-snug md:text-base font-medium">
               <h3 class={headingClass}>{item.heading}</h3>
               {item.text ? <span set:html={item.text} /> : null}
             </div>

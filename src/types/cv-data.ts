@@ -8,6 +8,7 @@ export interface ProjectItem {
   url?: string;
   image?: string;
   imageAlt?: string;
+  tags?: string[];
   description: string;
 }
 

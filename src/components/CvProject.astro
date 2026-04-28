@@ -6,11 +6,13 @@ interface Props {
   url?: string;
   imageUrl?: string;
   imageAlt?: string;
+  tags?: string[];
 }
 
-const { title, url, imageUrl, imageAlt } = Astro.props;
+const { title, url, imageUrl, imageAlt, tags = [] } = Astro.props;
 const hasUrl = Boolean(url?.trim());
 const hasImage = Boolean(imageUrl?.trim());
+const hasTags = tags.length > 0;
 ---
 
 <article>
@@ -26,7 +28,7 @@ const hasImage = Boolean(imageUrl?.trim());
       <div class="w-full rounded aspect-video bg-gray-600" aria-hidden="true" />
     )
   }
-  <h3 class="mb-2 mt-3 flex items-center text-2xl text-[#F0B356]">
+  <h3 class="mb-2 mt-3 flex items-center text-2xl text-[#F0B356] font-semibold">
     {
       hasUrl ? (
         <a
@@ -48,5 +50,18 @@ const hasImage = Boolean(imageUrl?.trim());
       )
     }
   </h3>
-  <p><slot /></p>
+
+  <p class="font-medium"><slot /></p>
+
+  {
+    hasTags ? (
+      <ul class="mt-3 flex flex-wrap gap-1.5 inline-flex">
+        {tags.map((tag) => (
+          <li class="rounded bg-white/10 px-1.5 py-0.5 text-sm font-medium text-[#E7E5DF]">
+            {tag}
+          </li>
+        ))}
+      </ul>
+    ) : null
+  }
 </article>

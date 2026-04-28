@@ -98,7 +98,7 @@ const hasMoreFeaturedProjects =
         </div>
       </div>
 
-      <section class="bg-[#1B222B] px-4 pb-10 pt-6 text-[#afafaf] md:pb-20">
+      <section class="bg-[#1B222B] px-4 pb-10 text-[#afafaf] md:pb-20 md:pt-6">
         <div class="mx-auto max-w-5xl space-y-4 text-base md:text-lg">
           {
             data.intro.map((paragraph, index) =>
@@ -142,6 +142,7 @@ const hasMoreFeaturedProjects =
                   url={project.url}
                   imageUrl={project.image}
                   imageAlt={project.imageAlt}
+                  tags={project.tags}
                 >
                   {project.description}
                 </CvProject>
@@ -153,10 +154,10 @@ const hasMoreFeaturedProjects =
           hasMoreFeaturedProjects ? (
             <button
               type="button"
-              class="js-featured-projects-expand mt-10 flex w-full items-center gap-4 rounded-md text-[#E7E5DF] transition hover:bg-white/10 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#3BA590] cursor-pointer"
+              class="js-featured-projects-expand mt-10 flex w-[calc(100%+1rem)] items-center gap-4 rounded-md text-[#E7E5DF] transition hover:bg-white/10 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#3BA590] cursor-pointer py-1 px-2 -mx-2 opacity-70 hover:opacity-100"
             >
               <span class="h-0 w-full border-t-2 border-[#3BA590]" aria-hidden="true" />
-              <div class="whitespace-nowrap text-xs font-semibold tracking-wide md:text-sm flex flex-col items-center gap-0.5 opacity-50 uppercase">
+              <div class="whitespace-nowrap text-xs font-semibold tracking-wide flex flex-col items-center gap-0.5 text-[#3BA590] uppercase">
                 {data.projects.moreProjectsButton}
                   <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16" aria-hidden="true">
                   <path fill-rule="evenodd" d="M1.646 6.646a.5.5 0 0 1 .708 0L8 12.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708"></path>
