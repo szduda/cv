@@ -6,7 +6,8 @@
  * Optional extra Chromium flags: PLAYWRIGHT_CHROMIUM_ARGS="--no-sandbox ..."
  */
 import { spawn } from "node:child_process";
-import { access, copyFile, mkdir, writeFile } from "node:fs/promises";
+import { access, copyFile, cp, mkdir, mkdtemp, rm, writeFile } from "node:fs/promises";
+import os from "node:os";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
 import { chromium } from "playwright";
@@ -58,9 +59,19 @@ async function main() {
   await mkdir(distPdfDir, { recursive: true });
   await writeFile(path.join(distDir, ".nojekyll"), "");
 
+  const stagingRoot = await mkdtemp(path.join(os.tmpdir(), "cv-pdf-render-"));
+  const baseSegment = siteBasePath.replace(/^\/|\/$/g, "");
+  const serveRoot = baseSegment ? stagingRoot : distDir;
+
+  if (baseSegment) {
+    const stagedBaseDir = path.join(stagingRoot, baseSegment);
+    await mkdir(stagedBaseDir, { recursive: true });
+    await cp(distDir, stagedBaseDir, { recursive: true });
+  }
+
   const serve = spawn(
     "npx",
-    ["serve", "dist", "-l", String(port), "--no-clipboard"],
+    ["serve", serveRoot, "-l", String(port), "--no-clipboard"],
     {
       cwd: root,
       /* Must not pipe stdout without draining: serve logs each request and hits EPIPE */
@@ -105,6 +116,7 @@ async function main() {
     serve.kill("SIGTERM");
     await new Promise((r) => setTimeout(r, 300));
     if (!serve.killed) serve.kill("SIGKILL");
+    if (baseSegment) await rm(stagingRoot, { recursive: true, force: true });
   }
 }
 
