@@ -77,6 +77,8 @@
         "tags": [
           "React",
           "Mantine",
+          "TanStack",
+          "Recoil",
           "AWS",
           "C#/Angular.js "
         ]
@@ -86,9 +88,11 @@
         "description": "Storefront, Store Locator, and a component library based on Atomic Design for one of the largest consumer e-commerce brands in its category worldwide, operating in a heavily regulated market.",
         "tags": [
           "Next.JS",
-          "Swell",
+          "Zustand",
           "Vercel",
-          "Elasticsearch"
+          "Elasticsearch",
+          "Salesforce",
+          "Contentful"
         ]
       },
       {
@@ -100,7 +104,7 @@
         "tags": [
           "Next.JS",
           "Tailwind",
-          "turbo",
+          "Turbo",
           "Swell",
           "Vercel",
           "PayU"
