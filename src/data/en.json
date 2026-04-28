@@ -13,10 +13,9 @@
     "emailHref": "mailto:szymon.piotr.duda@gmail.com"
   },
   "intro": [
-    "I have 13 years of commercial experience in software engineering. I work in JavaScript, Python, and C#.",
-    "I have worked across frontend and UX design as well as backend development, database programming, and device communication.",
-    "As an independent contractor, I have successfully delivered and deployed solutions that improve small business operations. In recent years I have focused on frontend technologies, with a stack centered around React.",
-    "In my spare time, I do photojournalism and design and program IoT devices. I play in a percussion band and enjoy mountain hiking."
+    "I have 12 years of commercial experience in software engineering. I work mainly in <b>JavaScript</b> and Python, formerly C#, and occasionally C++. I have handled a broad range of <b>front-end</b> and UX design topics, as well as <b>back-end</b> work (SSR/SSG, API proxy), database programming, and device communication.",
+    "As part of my own business activity, I successfully delivered and implemented solutions improving operations in small companies. I worked on contracts for large clients from the <b>USA, Norway, Germany</b>, and <b>Poland</b>, delivering scalable systems. In recent years I focused my professional growth on frontend technologies, with a stack centered around <b>React</b>. I continuously improve work organization - both my own and the whole team's - using <b>artificial intelligence</b> tools and <b>CI/CD automation</b>. I care about <b>security, architecture, and code clarity</b>.",
+    "As a hobby, I do photojournalism and design and program IoT devices. I play in a percussion band. I enjoy mountain trips."
   ],
   "skills": {
     "title": "Skills",
@@ -102,33 +101,43 @@
     "items": [
       {
         "side": "right",
-        "heading": "November 2016 - present",
-        "text": "Self-employment - software for small businesses, project support"
+        "heading": "March 2021 - present",
+        "text": "Senior Software Engineer at Sofomo - projects for US clients - e-commerce, CMS, digital products, integrations, migrations, CI/CD automation, and technical leadership in smaller teams"
       },
       {
         "side": "left",
+        "heading": "November 2020 - February 2021",
+        "text": "Self-employment - a series of implementations improving workflows in a food manufacturing company"
+      },
+      {
+        "side": "right",
         "heading": "March 2020 - October 2020",
-        "text": "Front-end developer at Navarra Lab"
+        "text": "Front-end developer at Navarra Lab - e-commerce + storefront"
       },
       {
         "side": "right",
         "heading": "February 2020 (project suspended)",
-        "text": "Front-end developer at Code and Pepper"
+        "text": "Front-end developer at Code and Pepper - Flutter project for the fintech domain"
       },
       {
         "side": "left",
+        "heading": "August 2019 - January 2020",
+        "text": "Self-employment - a fruit plantation management system including software for counting harvests via a data collector and a desktop component synchronizing reader data for payroll and report generation"
+      },
+      {
+        "side": "right",
         "heading": "January 2018 - July 2019",
-        "text": "Full-stack developer at Forte_ Digital"
+        "text": "Full-stack developer at Forte_ Digital - projects for the Scandinavian market"
       },
       {
         "side": "right",
         "heading": "January 2014 - June 2017",
-        "text": "Software developer at Comarch"
+        "text": "Software developer at Comarch - projects for the public sector, then work in the R&D department"
       },
       {
         "side": "left",
         "heading": "February 2013",
-        "text": "Individual assignment for a private healthcare office"
+        "text": "Individual contract for an NZOZ clinic - patient and test results database management system."
       }
     ]
   },
