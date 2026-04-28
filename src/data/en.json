@@ -101,15 +101,34 @@
     "title": "Work experience",
     "items": [
       {
-        "title": "Work experience",
-        "list": [
-          "November 2016 - present - Self-employment - software for small businesses, project support",
-          "March 2020 - October 2020 - Front-end developer at Navarra Lab",
-          "February 2020 (project suspended) - Front-end developer at Code and Pepper",
-          "January 2018 - July 2019 - Full-stack developer at Forte_ Digital",
-          "January 2014 - June 2017 - Software developer at Comarch",
-          "February 2013 - Individual assignment for a private healthcare office"
-        ]
+        "side": "right",
+        "heading": "November 2016 - present",
+        "text": "Self-employment - software for small businesses, project support"
+      },
+      {
+        "side": "left",
+        "heading": "March 2020 - October 2020",
+        "text": "Front-end developer at Navarra Lab"
+      },
+      {
+        "side": "right",
+        "heading": "February 2020 (project suspended)",
+        "text": "Front-end developer at Code and Pepper"
+      },
+      {
+        "side": "left",
+        "heading": "January 2018 - July 2019",
+        "text": "Full-stack developer at Forte_ Digital"
+      },
+      {
+        "side": "right",
+        "heading": "January 2014 - June 2017",
+        "text": "Software developer at Comarch"
+      },
+      {
+        "side": "left",
+        "heading": "February 2013",
+        "text": "Individual assignment for a private healthcare office"
       }
     ]
   },
@@ -130,5 +149,6 @@
       }
     ]
   },
+  "pdfDownloadLabel": "Download CV as PDF",
   "footer": "I agree to the processing of my personal data for recruitment purposes."
 }

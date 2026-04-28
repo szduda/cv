@@ -13,9 +13,8 @@
     "emailHref": "mailto:szymon.piotr.duda@gmail.com"
   },
   "intro": [
-    "Posiadam 13-letnie komercyjne doświadczenie w zakresie inżynierii oprogramowania. Pracuję w językach JavaScript, Python i C#.",
-    "Zajmowałem się zagadnieniami front-endu i projektowania UX, jak i back-endu, programowania baz danych oraz komunikacji z urządzeniami.",
-    "W ramach działalności gospodarczej z sukcesem zrealizowałem i wdrożyłem rozwiązania usprawniające pracę małych przedsiębiorstw. Ostatnie lata rozwoju zawodowego poświęciłem specjalizacji w technologiach frontendowych, ze stosem zorientowanym wokół React.",
+    "Posiadam 12-letnie komercyjne doświadczenie w zakresie inżynierii oprogramowania. Pracuję głównie w językach <b>JavaScript</b> i Python - okazjonalnie C#, C++. Zajmowałem się licznymi zagadnieniami <b>front-endu</b> i projektowania UX, jak i <b>back-endu</b> (SSR/SSG, Proxy API), programowania baz danych oraz komunikacji z urządzeniami.",
+    "W ramach działalności gospodarczej z sukcesem zrealizowałem i wdrożyłem rozwiązania usprawniające pracę małych przedsiębiorstw. Wykonywałem kontrakty dla dużych klientów z <b>USA, Norwegii, Niemiec</b> oraz <b>Polski</b> dostarczając skalowalne systemy. Ostatnie lata rozwoju zawodowego poświęciłem specjalizacji w technologiach frontendowych, ze stosem zorientowanym wokół <b>React</b>. Systematycznie usprawniam organizację pracy - swojej oraz całego zespołu - z pomocą narzędzi <b>sztucznej inteligencji</b> czy <b>automatyzacji CI/CD</b>. Dbam o <b>bezpieczeństwo, architekturę i przejrzystość</b> kodu.",
     "Hobbystycznie zajmuję się fotoreportażem oraz projektowaniem i programowaniem urządzeń IoT. Gram w zespole perkusyjnym. Lubię górskie wycieczki."
   ],
   "skills": {
@@ -38,11 +37,21 @@
       },
       {
         "title": "Back-end",
-        "list": ["ASP.NET MVC", "REST", "GraphQL", "PL/SQL", "T-SQL", "RabbitMQ"]
+        "list": [
+          "ASP.NET MVC",
+          "REST",
+          "GraphQL",
+          "PL/SQL",
+          "T-SQL",
+          "RabbitMQ"
+        ]
       },
       {
         "title": "Inne",
-        "list": [".NETCF", "Integracje z urządzeniami (Serial, TCP, UDP, ActiveSync, RFID)"]
+        "list": [
+          ".NETCF",
+          "Integracje z urządzeniami (Serial, TCP, UDP, ActiveSync, RFID)"
+        ]
       }
     ]
   },
@@ -50,21 +59,29 @@
     "title": "Wybrane projekty",
     "items": [
       {
-        "title": "Ascopharm",
+        "title": "SaaS - analityka treści społecznościowych",
+        "description": "Projekt dla międzynarodowej firmy SaaS specjalizującej się w analityce mediów społecznościowych, analizie transmisji telewizyjnej i monitoringu marki. Aplikacje webowe wspierające analizę danych marketingowych, raportowanie oraz integracje z zewnętrznymi platformami społecznościowymi."
+      },
+      {
+        "title": "E-Commerce - artykuły konsumenckie",
+        "description": "Storefront, Store Locator oraz Biblioteka Komponentów w systemie Atom Design dla jednego z największych consumer e-commerce brandów swojej kategorii na świecie, działającego na mocno regulowanym rynku."
+      },
+      {
+        "title": "E-Commerce - Ascopharm",
         "url": "https://ascopharm.de",
         "image": "/images/ascopharm.jpg",
         "imageAlt": "Zrzut ekranu sklepu Ascopharm",
         "description": "Witryna sklepu internetowego dystrybutora suplementów diety i produktów wspierających zdrowie."
       },
       {
-        "title": "Styrerommet",
+        "title": "SaaS - Styrerommet",
         "url": "https://styrerommet.no",
         "image": "/images/styrerommet.jpg",
         "imageAlt": "Zrzut ekranu aplikacji Styrerommet",
-        "description": "Modułowa aplikacja dla wspólnot mieszkaniowych wspierająca procedury zarządu, bezpieczeństwo i rozliczenia."
+        "description": "Modułowa aplikacja dla sieci wspólnot mieszkaniowych wspierająca procedury zarządu, bezpieczeństwo i rozliczenia."
       },
       {
-        "title": "Kongsberg Digital",
+        "title": "CMS - Kongsberg Digital",
         "url": "https://www.kongsberg.com/digital/",
         "image": "/images/kognifai.jpg",
         "imageAlt": "Zrzut ekranu strony Kongsberg Digital",
@@ -77,23 +94,53 @@
     "items": [
       {
         "title": "Implementacja",
-        "list": ["Visual Studio", "VS Code", "JetBrains Rider", "Storybook", "Webpack", "Gulp"]
+        "list": [
+          "Visual Studio",
+          "VS Code",
+          "JetBrains Rider",
+          "Storybook",
+          "Webpack",
+          "Gulp"
+        ]
       },
       {
         "title": "Kontrola wersji",
-        "list": ["Git", "GitLab", "VSTS", "GitHub", "BitBucket"]
+        "list": [
+          "Git",
+          "GitLab",
+          "VSTS",
+          "GitHub",
+          "BitBucket"
+        ]
       },
       {
         "title": "Projekt",
-        "list": ["VSTS", "Monday", "Mural", "JIRA"]
+        "list": [
+          "VSTS",
+          "Monday",
+          "Mural",
+          "JIRA"
+        ]
       },
       {
         "title": "Grafika",
-        "list": ["Photoshop", "Lightroom", "Invision", "Zeppelin", "Abstract"]
+        "list": [
+          "Photoshop",
+          "Lightroom",
+          "Invision",
+          "Zeppelin",
+          "Abstract"
+        ]
       },
       {
         "title": "Inne",
-        "list": ["Azure", "Travis", "Chromatic", "Jest", "Formatters, Linters"]
+        "list": [
+          "Azure",
+          "Travis",
+          "Chromatic",
+          "Jest",
+          "Formatters, Linters"
+        ]
       }
     ]
   },
@@ -101,15 +148,44 @@
     "title": "Zatrudnienie",
     "items": [
       {
-        "title": "Zatrudnienie",
-        "list": [
-          "od listopada 2016 - Działalność gospodarcza - oprogramowanie dla małych firm, wsparcie projektów",
-          "marzec 2020 - październik 2020 - Front-end developer w Navarra Lab",
-          "luty 2020 (projekt zawieszony) - Front-end developer w Code and Pepper",
-          "styczeń 2018 - lipiec 2019 - Full-stack developer w Forte_ Digital",
-          "styczeń 2014 - czerwiec 2017 - Software developer w Comarch",
-          "luty 2013 - Zlecenie indywidualne dla NZOZ"
-        ]
+        "side": "right",
+        "heading": "marzec 2021 - obecnie",
+        "text": "Senior Software Engineer w Sofomo - projekty dla USA - e-commerce, CMS, produkty cyfrowe, integracje, migracje, autmatyzacja CI/CD, leadowanie w mniejszych zespołach"
+      },
+      {
+        "side": "left",
+        "heading": "listopad 2020 - luty 2021",
+        "text": "Działalność gospodarcza - seria wdrożeń usprawniających pracę w przedsiębiorstwie produkcyjnym z branży spożywczej"
+      },
+      {
+        "side": "right",
+        "heading": "marzec 2020 - październik 2020",
+        "text": "Front-end developer w Navarra Lab - e-commerce + storefront"
+      },
+      {
+        "side": "right",
+        "heading": "luty 2020 (projekt zawieszony)",
+        "text": "Front-end developer w Code and Pepper - projekt w technologii Flutter dla branży fintech"
+      },
+      {
+        "side": "left",
+        "heading": "sierpień 2019 - styczeń 2020",
+        "text": "Działalność gospodarcza - system zarządzania plantacją owoców obejmujący oprogramowanie do zliczania zbiorów poprzez kolektor danych oraz część desktopową synchronizującą dane z czytnika celem generowania wypłat i raportów."
+      },
+      {
+        "side": "right",
+        "heading": "styczeń 2018 - lipiec 2019",
+        "text": "Full-stack developer w Forte_ Digital - projekty dla rynku Skandynawskiego"
+      },
+      {
+        "side": "right",
+        "heading": "styczeń 2014 - czerwiec 2017",
+        "text": "Software developer w Comarch - projekty dla sektora publicznego, następnie praca w dziale R&D"
+      },
+      {
+        "side": "left",
+        "heading": "luty 2013",
+        "text": "Zlecenie indywidualne dla NZOZ - system zarządzania bazą pacjentów i wyników badań."
       }
     ]
   },
@@ -118,17 +194,25 @@
     "items": [
       {
         "title": "Studia",
-        "list": ["Informatyka i Ekonometria, Wydział Zarządzania, Akademia Górniczo-Hutnicza (2011-2016)"]
+        "list": [
+          "Informatyka i Ekonometria, Wydział Zarządzania, Akademia Górniczo-Hutnicza (2011-2016)"
+        ]
       },
       {
         "title": "Kursy",
-        "list": ["Projektowanie ergonomicznych interfejsów użytkownika (2017)"]
+        "list": [
+          "Projektowanie ergonomicznych interfejsów użytkownika (2017)"
+        ]
       },
       {
         "title": "Języki obce",
-        "list": ["Angielski (biegle, certyfikat C1)", "Francuski (podstawowy)"]
+        "list": [
+          "Angielski (biegle, certyfikat C1)",
+          "Francuski (podstawowy)"
+        ]
       }
     ]
   },
+  "pdfDownloadLabel": "Pobierz CV w formacie PDF",
   "footer": "Wyrażam zgodę na przetwarzanie moich danych osobowych w celu prowadzenia rekrutacji."
 }

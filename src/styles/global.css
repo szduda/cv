@@ -1,11 +1,12 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
 
 @media print {
+
+  /* Zero @page margin so Chromium has no band for built-in header/footer (URL, date, page #).
+     Use body padding instead so content stays inside typical non-printable margins. */
   @page {
     size: A4;
-    margin: 1cm;
+    margin: 0;
   }
 
   * {
@@ -20,8 +21,13 @@
     line-height: 1.2 !important;
   }
 
+  body {
+    padding: 10mm !important;
+    box-sizing: border-box !important;
+  }
+
   h1 {
-    font-size: 16px !important;
+    font-size: 20px !important;
     line-height: 1.1 !important;
     margin: 0 !important;
   }
@@ -30,7 +36,7 @@
   h3 {
     font-size: 14px !important;
     line-height: 1.15 !important;
-    margin: 0 0 4px 0 !important;
+    margin: 0 0 8px 0 !important;
   }
 
   img,
@@ -57,13 +63,24 @@
     padding: 0 !important;
   }
 
+  footer {
+    position: absolute;
+    bottom: 10mm;
+    left: 10mm;
+    font-style: italic;
+  }
+
   .sticky,
   .fixed {
     position: static !important;
   }
 
+  main {
+    min-height: 0 !important;
+  }
+
   section {
-    margin-bottom: 10px !important;
+    margin-top: 20px !important;
   }
 
   .grid {
@@ -78,14 +95,59 @@
   }
 
   .employment-section,
-  .employment-section > div,
+  .employment-section>div,
   .employment-section .grid {
     width: 100% !important;
     max-width: 100% !important;
   }
 
+  .employment-section>div {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+
+  .employment-section .cv-timeline {
+    width: 100% !important;
+    max-width: 100% !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+  }
+
   .employment-section .grid {
     grid-template-columns: minmax(0, 1fr) !important;
+  }
+
+  .education-section .grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+  }
+
+  /* Employment timeline: plain bulleted list, no axis or dots; date + description inline */
+  .employment-section .cv-timeline-list {
+    list-style: disc outside !important;
+    padding-left: 1.15em !important;
+  }
+
+  .employment-section .cv-timeline-list>li.cv-timeline-row {
+    display: list-item !important;
+    margin-bottom: 4px !important;
+  }
+
+  .employment-section .cv-timeline-cell--empty {
+    display: none !important;
+  }
+
+  .employment-section .cv-timeline-cell h3 {
+    display: inline !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    font-size: inherit !important;
+    font-weight: 600 !important;
+    text-transform: none !important;
+    letter-spacing: normal !important;
+  }
+
+  .employment-section .cv-timeline-cell h3+span::before {
+    content: "— ";
   }
 
   ul {
