@@ -6,7 +6,7 @@
  * Optional extra Chromium flags: PLAYWRIGHT_CHROMIUM_ARGS="--no-sandbox ..."
  */
 import { spawn } from "node:child_process";
-import { access, copyFile, mkdir } from "node:fs/promises";
+import { access, copyFile, mkdir, writeFile } from "node:fs/promises";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
 import { chromium } from "playwright";
@@ -54,6 +54,7 @@ async function main() {
 
   await mkdir(publicPdfDir, { recursive: true });
   await mkdir(distPdfDir, { recursive: true });
+  await writeFile(path.join(distDir, ".nojekyll"), "");
 
   const serve = spawn(
     "npx",

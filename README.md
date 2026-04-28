@@ -1,6 +1,11 @@
 # CV Landing (Astro + Tailwind + JSON i18n)
 
+https://github.io/szduda/cv
+
+#### Live URL
 Static CV landing page migrated to:
+
+### Techstack
 
 - Astro
 - Tailwind CSS
