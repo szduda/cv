@@ -38,7 +38,9 @@ jobs:
         run: npx playwright install --with-deps chromium
 
       - name: Build site and generate PDFs
-        run: npm run print-pdf
+        # Unset BASE_URL: Astro injects all env vars as import.meta.env.* and would
+        # override Astro's canonical import.meta.env.BASE_URL from astro.config.
+        run: env -u BASE_URL npm run print-pdf
 
       - name: Configure Pages
         uses: actions/configure-pages@v6
