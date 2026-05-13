@@ -22,9 +22,12 @@ const base = `http://127.0.0.1:${port}`;
 const rawSiteBasePath = process.env.PDF_SITE_BASE_PATH || "/cv/";
 const siteBasePath = `/${rawSiteBasePath.replace(/^\/+|\/+$/g, "")}/`;
 
+const pdfPl = "Szymon Duda - CV (pl).pdf";
+const pdfEn = "Szymon Duda - CV (en).pdf";
+
 const routes = [
-  { urlPath: `${siteBasePath}`, file: "cv-pl.pdf" },
-  { urlPath: `${siteBasePath}en/`, file: "cv-en.pdf" },
+  { urlPath: `${siteBasePath}`, file: pdfPl },
+  { urlPath: `${siteBasePath}en/`, file: pdfEn },
 ];
 
 async function pathExists(p) {

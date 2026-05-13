@@ -18,7 +18,7 @@
   html,
   body {
     font-size: 11px !important;
-    line-height: 1.2 !important;
+    line-height: 1.1 !important;
   }
 
   body {
@@ -27,9 +27,13 @@
   }
 
   h1 {
-    font-size: 20px !important;
+    font-size: 16px !important;
     line-height: 1.1 !important;
     margin: 0 !important;
+  }
+
+  .intro {
+    font-size: 11px !important;
   }
 
   h2,
@@ -40,8 +44,8 @@
   }
 
   h3 {
-    font-size: 11px !important;
-    opacity: 0.7 !important;
+    font-size: 10px !important;
+    opacity: 0.5 !important;
   }
 
   img,
