@@ -10,7 +10,7 @@
     "phone": "+48 722-321-591",
     "phoneHref": "tel:+48722321591",
     "email": "szymon.piotr.duda@gmail.com",
-    "emailHref": "mailto:szymon.piotr.duda@gmail.com"
+    "emailHref": "mailto:szymon.piotr.duda+cv@gmail.com"
   },
   "intro": [
     "I have 12 years of commercial experience in software engineering. I work mainly in <b>JavaScript</b> and Python, formerly C#, and occasionally C++. I have handled a broad range of <b>front-end</b> and UX design topics, as well as <b>back-end</b> work (SSR/SSG, API proxy), database programming, and device communication.",
@@ -34,11 +34,11 @@
       {
         "title": "Back-end",
         "list": [
-          "Next.JS",
-          "Express",
+          "Next.JS, Express, Tauri",
+          "CMS (Contentful, Prismic)",
+          "E-Commerce (Swell)",
           "RESTful API, Web Hooks, WebSockets",
           "PostgreSQL, MSSQL, Oracle, MySQL",
-          "Tauri",
           "ASP.NET MVC, Web API",
           "GraphQL, RabbitMQ"
         ]
@@ -56,6 +56,7 @@
         "list": [
           "Functional programming",
           "Device integrations (Serial, TCP, UDP, ActiveSync, RFID)",
+          "Microcontrollers (MicroPython, CircuitPython)",
           "Vue.js (Vue Storefront)",
           "// legacy",
           ".NETCF",
@@ -86,6 +87,8 @@
       {
         "title": "E-Commerce - consumer goods",
         "description": "Storefront, Store Locator, and a component library based on Atomic Design for one of the largest consumer e-commerce brands in its category worldwide, operating in a heavily regulated market.",
+        "image": "/images/project-nda-shhh.webp",
+        "imageAlt": "Placeholder graphic — confidential project (NDA)",
         "tags": [
           "Next.JS",
           "Zustand",
@@ -104,7 +107,7 @@
         "tags": [
           "Next.JS",
           "Tailwind",
-          "Turbo",
+          "Turborepo",
           "Swell",
           "Vercel",
           "PayU"
@@ -126,7 +129,6 @@
       },
       {
         "title": "E-Commerce - Ascopharm",
-        "url": "https://ascopharm.de",
         "image": "/images/ascopharm.jpg",
         "imageAlt": "Screenshot of Ascopharm store",
         "description": "E-commerce website for a distributor of dietary supplements and health-supporting products.",
@@ -138,7 +140,6 @@
       },
       {
         "title": "SaaS - Styrerommet",
-        "url": "https://styrerommet.no",
         "image": "/images/styrerommet.jpg",
         "imageAlt": "Screenshot of Styrerommet application",
         "description": "Modular application for a network of housing associations supporting board procedures, security, and settlements.",
@@ -151,7 +152,6 @@
       },
       {
         "title": "CMS - Kongsberg Digital",
-        "url": "https://www.kongsberg.com/digital/",
         "image": "/images/kognifai.jpg",
         "imageAlt": "Screenshot of Kongsberg Digital website",
         "description": "Kongsberg company websites presenting organization profile and details of services and products.",
