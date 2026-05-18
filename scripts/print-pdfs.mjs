@@ -28,6 +28,12 @@ const pdfEn = "Szymon Duda - CV (en).pdf";
 /** A4 width/height at 96 CSS px/in — matches Chromium print layout for @page { size: A4 }. */
 const A4_VIEWPORT = { width: 794, height: 1123 };
 
+/**
+ * Chrome's interactive print (Ctrl+P) renders ~3.3% smaller than CDP/Playwright page.pdf()
+ * for the same @media print CSS. Tune with PDF_PRINT_SCALE if a future Chrome build drifts.
+ */
+const PDF_PRINT_SCALE = Number(process.env.PDF_PRINT_SCALE ?? "0.967");
+
 const routes = [
   { urlPath: `${siteBasePath}`, file: pdfPl },
   { urlPath: `${siteBasePath}en/`, file: pdfEn },
@@ -47,13 +53,15 @@ async function waitForServer(url, timeoutMs = 30_000) {
   while (Date.now() - start < timeoutMs) {
     try {
       const res = await fetch(url, { redirect: "follow" });
-      if (res.ok) return;
+      if (!res.ok) continue;
+      const html = await res.text();
+      if (html.includes("<h1")) return;
     } catch {
       /* retry */
     }
     await new Promise((r) => setTimeout(r, 150));
   }
-  throw new Error(`Timed out waiting for static server at ${url}`);
+  throw new Error(`Timed out waiting for CV page at ${url}`);
 }
 
 async function main() {
@@ -89,7 +97,7 @@ async function main() {
 
   let browser;
   try {
-    await waitForServer(`${base}/`);
+    await waitForServer(`${base}${routes[0].urlPath}`);
 
     const extraArgs =
       process.env.PLAYWRIGHT_CHROMIUM_ARGS?.split(/\s+/).filter(Boolean) ?? [];
@@ -116,6 +124,7 @@ async function main() {
         preferCSSPageSize: true,
         printBackground: true,
         margin: { top: "0", right: "0", bottom: "0", left: "0" },
+        scale: PDF_PRINT_SCALE,
       });
       await copyFile(destPublic, destDist);
       console.log(`Wrote ${path.relative(root, destPublic)} and dist/pdf/${file}`);
