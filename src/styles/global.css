@@ -9,6 +9,23 @@
     margin: 0;
   }
 
+  /* Pin Tailwind theme tokens to print px sizes (rem-based vars scale with viewport). */
+  :root {
+    font-size: 11px !important;
+    --text-xs: 10px;
+    --text-sm: 10px;
+    --text-base: 11px;
+    --text-lg: 11px;
+    --text-2xl: 14px;
+    --text-3xl: 14px;
+    --text-4xl: 16px;
+  }
+
+  html {
+    -webkit-text-size-adjust: 100%;
+    text-size-adjust: 100%;
+  }
+
   * {
     background: transparent !important;
     box-shadow: none !important;

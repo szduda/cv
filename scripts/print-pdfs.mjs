@@ -25,6 +25,9 @@ const siteBasePath = `/${rawSiteBasePath.replace(/^\/+|\/+$/g, "")}/`;
 const pdfPl = "Szymon Duda - CV (pl).pdf";
 const pdfEn = "Szymon Duda - CV (en).pdf";
 
+/** A4 width/height at 96 CSS px/in — matches Chromium print layout for @page { size: A4 }. */
+const A4_VIEWPORT = { width: 794, height: 1123 };
+
 const routes = [
   { urlPath: `${siteBasePath}`, file: pdfPl },
   { urlPath: `${siteBasePath}en/`, file: pdfEn },
@@ -95,19 +98,22 @@ async function main() {
       headless: true,
       args: extraArgs,
     });
-    const context = await browser.newContext();
+    const context = await browser.newContext({ deviceScaleFactor: 1 });
     const page = await context.newPage();
 
     for (const { urlPath, file } of routes) {
       const destPublic = path.join(publicPdfDir, file);
       const destDist = path.join(distPdfDir, file);
+      await page.setViewportSize(A4_VIEWPORT);
+      await page.emulateMedia({ media: "print" });
       await page.goto(`${base}${urlPath}`, {
-        waitUntil: "load",
+        waitUntil: "networkidle",
         timeout: 120_000,
       });
+      await page.evaluate(() => document.fonts.ready);
       await page.pdf({
         path: destPublic,
-        format: "A4",
+        preferCSSPageSize: true,
         printBackground: true,
         margin: { top: "0", right: "0", bottom: "0", left: "0" },
       });
