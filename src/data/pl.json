@@ -28,7 +28,8 @@
           "TypeScript",
           "HTML & szablonowanie",
           "Web API",
-          "CSS (SaSS, Less, PostCSS, BEM, Flexbox, CSS-in-JS, Tailwind, CSS modules)"
+          "CSS (SaSS, Less, PostCSS, BEM, Flexbox, CSS-in-JS, Tailwind, CSS modules)",
+          "ostatnio pracuję z: microfrontends (MFE)"
         ]
       },
       {
@@ -171,7 +172,7 @@
       {
         "title": "Implementacja",
         "list": [
-          "Cursor",
+          "Cursor, Claude, Gemini, Rovo",
           "VS Code, Pycharm, Visual Studio",
           "Storybook",
           "Webpack, Vite, Astro, Parcel, Tauri"
@@ -180,9 +181,10 @@
       {
         "title": "DevOps",
         "list": [
-          "Azure, Vercel, GitHub Pages",
+          "Azure, AWS, Vercel, GitHub Pages",
           "CI/CD Actions & Workflow",
-          "Git CLI, TFS, BitBucket, GitLab"
+          "Git CLI, TFS, BitBucket, GitLab",
+          "Datadog"
         ]
       },
       {
@@ -199,7 +201,7 @@
       {
         "title": "Inne",
         "list": [
-          "Monday, JIRA, VSTS, Mural",
+          "Monday, JIRA, VSTS, Mural, Confluence",
           "Chromatic",
           "Jest, Vitest",
           "ESlint, Prettier"

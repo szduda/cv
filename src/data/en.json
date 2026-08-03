@@ -15,7 +15,7 @@
   "intro": [
     "I have 12 years of commercial experience in software engineering. I work mainly in <b>JavaScript</b> and Python, formerly C#, and occasionally C++. I have handled a broad range of <b>front-end</b> and UX design topics, as well as <b>back-end</b> work (SSR/SSG, API proxy), database programming, and device communication.",
     "As part of my own business activity, I successfully delivered and implemented solutions improving operations in small companies. I worked on contracts for large clients from the <b>USA, Norway, Germany</b>, and <b>Poland</b>, delivering scalable systems. In recent years I focused my professional growth on frontend technologies, with a stack centered around <b>React</b>. I continuously improve work organization - both my own and the whole team's - using <b>artificial intelligence</b> tools and <b>CI/CD automation</b>. I care about <b>security, architecture, and code clarity</b>.",
-    "As a hobby, I do photojournalism and design and program IoT devices. I play in a percussion band. I enjoy mountain trips."
+    "As a hobby, I do photojournalism and play in a percussion band. When I don't, I learn to design and program IoT devices. I enjoy mountain trips."
   ],
   "skills": {
     "title": "Skills",
@@ -28,7 +28,8 @@
           "TypeScript",
           "HTML & templating",
           "Web API",
-          "CSS (SaSS, Less, PostCSS, BEM, Flexbox, CSS-in-JS, Tailwind, CSS modules)"
+          "CSS (SaSS, Less, PostCSS, BEM, Flexbox, CSS-in-JS, Tailwind, CSS modules)",
+          "recently working with: microfrontends (MFE)"
         ]
       },
       {
@@ -171,7 +172,7 @@
       {
         "title": "Implementation",
         "list": [
-          "Cursor",
+          "Cursor, Claude, Gemini, Rovo",
           "VS Code, Pycharm, Visual Studio",
           "Storybook",
           "Webpack, Vite, Astro, Parcel, Tauri"
@@ -180,9 +181,10 @@
       {
         "title": "DevOps",
         "list": [
-          "Azure, Vercel, GitHub Pages",
+          "Azure, AWS, Vercel, GitHub Pages",
           "CI/CD Actions & Workflow",
-          "Git CLI, TFS, BitBucket, GitLab"
+          "Git CLI, TFS, BitBucket, GitLab",
+          "Datadog"
         ]
       },
       {
@@ -199,7 +201,7 @@
       {
         "title": "Other",
         "list": [
-          "Monday, JIRA, VSTS, Mural",
+          "Monday, JIRA, VSTS, Mural, Confluence",
           "Chromatic",
           "Jest, Vitest",
           "ESlint, Prettier"
